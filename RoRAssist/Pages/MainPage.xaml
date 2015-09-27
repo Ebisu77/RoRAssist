@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Left" Height="136" Margin="71,84,0,0" VerticalAlignment="Top" Width="168">
-            <Button x:Name="startButton" Content="Start Game Assistent" Click="startButton_Click"/>
+            <Button x:Name="startButton"  Content="Start" Click="startButton_Click"/>
             <Button x:Name="quitButton" Content="Quit" Click="quitButton_Click"/>
         </StackPanel>
 
