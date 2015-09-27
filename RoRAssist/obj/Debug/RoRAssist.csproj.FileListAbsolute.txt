@@ -1,0 +1,38 @@
+c:\users\anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\bin\Debug\RoRAssist.exe.config
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\bin\Debug\RoRAssist.exe
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\bin\Debug\RoRAssist.pdb
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csprojResolveAssemblyReference.cache
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\MainWindow.g.cs
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\App.g.cs
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist_MarkupCompile.cache
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist_MarkupCompile.lref
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\MainWindow.baml
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist.g.resources
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist.Properties.Resources.resources
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csproj.GenerateResource.Cache
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist.exe
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\RoRAssist.pdb
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\Pages\MainPage.g.cs
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\Pages\MainPage.baml
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\Pages\DefaultPage.g.cs
+C:\Users\Anakin\documents\visual studio 2015\Projects\RoRAssist\RoRAssist\obj\Debug\Pages\DefaultPage.baml
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\bin\Debug\RoRAssist.exe.config
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.exe
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.pdb
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\bin\Debug\RoRAssist.exe
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\bin\Debug\RoRAssist.pdb
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csprojResolveAssemblyReference.cache
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\MainWindow.g.cs
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\DefaultPage.g.cs
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\MainPage.g.cs
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\App.g.cs
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist_MarkupCompile.cache
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist_MarkupCompile.lref
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\MainWindow.baml
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\DefaultPage.baml
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\MainPage.baml
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.g.resources
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.Properties.Resources.resources
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csproj.GenerateResource.Cache
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\PersuasionPage.g.cs
+C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\PersuasionPage.baml
