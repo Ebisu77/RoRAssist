@@ -21,9 +21,37 @@ namespace RoRAssist.Pages
     /// </summary>
     public partial class PersuasionPage : Page
     {
+        #region Fields
+        string displayResultNumber = "test1";    
+
+        #endregion
+
+
         public PersuasionPage()
         {
             InitializeComponent();
+            displayResults();             
         }
+
+        //TODO: (VM) Create method for displaying results in lower half of the screen (data binding...)
+        private void displayResults()
+        {
+            LabelResultNumber.DataContext = "Test2";
+        }
+
+
+        #region Controllers
+        //TODO: Implement behaviour for changed values in one of boxes 
+        //(event handlers? ... alternative: simple button called "calculate")
+        private void valueChanged()
+        {
+            Service.Calculations.CalculatePersuasion();            
+        }
+
+        private void SetOratory_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            valueChanged();            
+        }
+        #endregion
     }
 }

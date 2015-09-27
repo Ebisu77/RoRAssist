@@ -20,31 +20,20 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-           
-                <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <Label Content="Oratory: "
-                       />
-                    <Label Content="Influence: " 
-                       /> 
-                    <Label Content="Bribe: " 
-                       />
-                </StackPanel>
-                <StackPanel Grid.Column="1" Grid.Row="0" >
-                    <xctk:IntegerUpDown x:Name="SetOratory"                          
-                       Value="5" Increment="1" 
-                       Canvas.Right="50" Canvas.Top="13" Canvas.Left="81" Width="40" 
-                     />
-                    <xctk:IntegerUpDown x:Name="SetInfluence"
-                       Value="14" Increment="1" 
-                       Canvas.Right="50" Canvas.Top="39" Canvas.Left="82"
-                        />
-                    <xctk:IntegerUpDown x:Name="SetBribe"
-                       Value="8" Increment="1" 
-                       Canvas.Right="50" Canvas.Top="66" Canvas.Left="82"
-                       />
-                </StackPanel>
-
+            </Grid.ColumnDefinitions>           
+            <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Label Content="Oratory: "/>
+                <Label Content="Influence: "/> 
+                <Label Content="Bribe: "/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="0" >
+                <xctk:IntegerUpDown x:Name="SetOratory"                          
+                   Value="5" Increment="1" ValueChanged="SetOratory_ValueChanged"/>
+                <xctk:IntegerUpDown x:Name="SetInfluence"
+                   Value="14" Increment="1"/>
+                <xctk:IntegerUpDown x:Name="SetBribe"
+                   Value="8" Increment="1"/>
+            </StackPanel>
             <StackPanel Grid.Column="2" Grid.Row="0" >
                 <Label Content="Loyalty: "/>
                 <Label Content="Personal Treasury: "                        />
@@ -52,43 +41,22 @@
             </StackPanel>
             <StackPanel Grid.Column="3" Grid.Row="0" >
                 <xctk:IntegerUpDown x:Name="SetLoyalty"
-                       Value="7" Increment="1" 
-                     
-                       />
-
+                   Value="7" Increment="1"/>
                 <xctk:IntegerUpDown x:Name="SetPersonalTreasury"
-                       Value="1" Increment="1"                        
-                       />
-
+                   Value="1" Increment="1"/>
                 <xctk:IntegerUpDown x:Name="SetCounterBribe"
-                       Value="3" Increment="1" 
-                      
-                       />
+                   Value="3" Increment="1"/>
                 <CheckBox x:Name="SenatorAlignement"
-                       Content="Senator in Faction"                       
-                    
-                       />
+                   Content="Senator in Faction"                       />
                 <CheckBox x:Name="EraEnd" 
-                       Content="Era End" 
-                   
-                       
-                       />
+                   Content="Era End"/>
             </StackPanel>
-           
-            
-
-
-        </Grid>
+       </Grid>
         <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="173,0,196,0" Width="131">
             <Button Content="Calculate"  Canvas.Left="167" Canvas.Top="168" Width="Auto"/>
             <Label Grid.Row="1" x:Name="LabelResult" Content="Result" HorizontalAlignment="Center"/>
             <Label Grid.Row="1" x:Name="LabelBaseNumber" Content="{Binding}" Width="Auto"/>
             <Label Grid.Row="1" x:Name="LabelResultNumber" Content="{Binding}" Width="Auto"/>
         </StackPanel>
-
-
-
-
-
     </Grid>
 </Page>
