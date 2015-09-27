@@ -36,3 +36,6 @@ C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debu
 C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csproj.GenerateResource.Cache
 C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\PersuasionPage.g.cs
 C:\Users\Anakin\OneDrive\Programing\Projects\VS2015\RoRAssist\RoRAssist\obj\Debug\Pages\PersuasionPage.baml
+C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\bin\Debug\RoRAssist.exe.config
+C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist.exe
+C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist.pdb

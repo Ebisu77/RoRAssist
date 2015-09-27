@@ -25,6 +25,7 @@ namespace RoRAssist.Pages
             InitializeComponent();
 
             //toto je len pokusny coment na zmazanie
+            //druhy pokus pre testovanie
         }
     }
 }
