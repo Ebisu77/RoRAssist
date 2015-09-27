@@ -23,11 +23,6 @@ namespace RoRAssist.Pages
         public PersuasionPage()
         {
             InitializeComponent();
-
-            //toto je len pokusny coment na zmazanie
-            //druhy pokus pre testovanie
-            //treti pokus
-            //stvrty pokus snad uz posledny
         }
     }
 }
