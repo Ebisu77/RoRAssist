@@ -56,4 +56,3 @@ C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\Per
 C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist.g.resources
 C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist.Properties.Resources.resources
 C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csproj.GenerateResource.Cache
-C:\Users\Anakin\OneDrive\Programing\Repo\RoRAssist\RoRAssist\bin\Debug\Xceed.Wpf.Toolkit.dll

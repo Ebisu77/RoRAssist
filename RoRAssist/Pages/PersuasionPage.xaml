@@ -11,7 +11,7 @@
 
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid x:Name="ChildGrid" Grid.Row="0" >
@@ -27,11 +27,11 @@
                 <Label Content="Bribe: "/>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="0" >
-                <xctk:IntegerUpDown x:Name="SetOratory"                          
-                   Value="5" Increment="1" ValueChanged="SetOratory_ValueChanged"/>
-                <xctk:IntegerUpDown x:Name="SetInfluence"
+                <xctk:IntegerUpDown x:Name="setOratory"                          
+                   Value="5" Increment="1"/>
+                <xctk:IntegerUpDown x:Name="setInfluence"
                    Value="14" Increment="1"/>
-                <xctk:IntegerUpDown x:Name="SetBribe"
+                <xctk:IntegerUpDown x:Name="setBribe"
                    Value="8" Increment="1"/>
             </StackPanel>
             <StackPanel Grid.Column="2" Grid.Row="0" >
@@ -40,23 +40,24 @@
                 <Label Content="Counter Bribe: "/>
             </StackPanel>
             <StackPanel Grid.Column="3" Grid.Row="0" >
-                <xctk:IntegerUpDown x:Name="SetLoyalty"
+                <xctk:IntegerUpDown x:Name="setLoyalty"
                    Value="7" Increment="1"/>
-                <xctk:IntegerUpDown x:Name="SetPersonalTreasury"
+                <xctk:IntegerUpDown x:Name="setPersonalTreasury"
                    Value="1" Increment="1"/>
-                <xctk:IntegerUpDown x:Name="SetCounterBribe"
+                <xctk:IntegerUpDown x:Name="setCounterBribe"
                    Value="3" Increment="1"/>
-                <CheckBox x:Name="SenatorAlignement"
-                   Content="Senator in Faction"                       />
-                <CheckBox x:Name="EraEnd" 
+                <CheckBox x:Name="senatorAlignement"
+                   Content="Senator in Faction" Checked="senatorAlignement_Checked" Unchecked="senatorAlignement_Unchecked"/>
+                <CheckBox x:Name="eraEnd" 
                    Content="Era End"/>
             </StackPanel>
        </Grid>
         <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="173,0,196,0" Width="131">
-            <Button Content="Calculate"  Canvas.Left="167" Canvas.Top="168" Width="Auto"/>
-            <Label Grid.Row="1" x:Name="LabelResult" Content="Result" HorizontalAlignment="Center"/>
-            <Label Grid.Row="1" x:Name="LabelBaseNumber" Content="{Binding}" Width="Auto"/>
-            <Label Grid.Row="1" x:Name="LabelResultNumber" Content="{Binding}" Width="Auto"/>
+            <Button x:Name ="calculateButton"  Content="Calculate" Width="Auto" Click="calculateButton_Click" />
+            <Label Grid.Row="1" x:Name="labelResult" Content="Result" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" x:Name="Result" Text="test possibility of textblock instead of labels"/>
+            <Label Grid.Row="1" x:Name="labelBaseNumber" Content="{Binding}" Width="Auto"/>
+            <Label Grid.Row="1" x:Name="labelDiceRoll" Content="{Binding}" Width="Auto"/>
         </StackPanel>
     </Grid>
 </Page>

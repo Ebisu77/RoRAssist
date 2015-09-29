@@ -12,12 +12,42 @@ namespace RoRAssist.Service
     public static class Calculations
     {
 
-        #region persuasion page calculations
-            
-            public static int CalculatePersuasion()
+        #region Persuasion Page Calculations
+
+        /// <summary>
+        /// Calculates Base number for persuation attemp
+        /// </summary>
+        /// <param name="attackingSenatorOratory">oratory of attackin senator</param>
+        /// <param name="attackingSenatorInfluence">influence of attackin senator</param>
+        /// <param name="attackingSenatorBribe">bibe invested by attacking senator</param>
+        /// <param name="deffendingSenatorLoyalty">loyalty of defending senator</param>
+        /// <param name="deffendingSenatorPersonalTreasury">personal treasury of defending senator</param>
+        /// <param name="deffendingSenatorCounterBribe">counter bribe of defending senator</param>
+        /// <param name="senatorAlignementStatus">status determining if defending senator is member of a faction</param>
+        /// <returns></returns>
+        public static int CalculatePersuasionBaseNumber(int attackingSenatorOratory, int attackingSenatorInfluence, 
+                int attackingSenatorBribe, int deffendingSenatorLoyalty, int deffendingSenatorPersonalTreasury, 
+                int deffendingSenatorCounterBribe, bool senatorAlignementStatus)
                 {
-                    //TODO: implement calculation logic and return result
-                     return 7;
+                    //declaring calculation support
+                    int senatorAlignementValue;
+                    int baseNumberResult; 
+
+                    //determining value for defending senator based on his faction alignement
+                    if (senatorAlignementStatus)
+                    {
+                        senatorAlignementValue = 7;
+                    }
+                    else
+                    {
+                        senatorAlignementValue = 0;   
+                    }
+
+                    //calculating result number and returning value
+                    baseNumberResult = (attackingSenatorOratory + attackingSenatorInfluence + attackingSenatorBribe) -
+                        (deffendingSenatorLoyalty + deffendingSenatorPersonalTreasury + deffendingSenatorCounterBribe + senatorAlignementValue);
+                        
+                    return baseNumberResult;
                 }
             
             
