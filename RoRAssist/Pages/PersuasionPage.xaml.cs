@@ -17,12 +17,10 @@ using Xceed.Wpf.Toolkit;
 namespace RoRAssist.Pages
 {
 
-    //general TODO and ideas: 
-    //-examine bool flags and how they behave, mostly after first load of page
-    //-play with senator alignement checkbox(one click method instead of two check/uncheck methods?), also some getter for current status of checkbox would be nice....
-    //-implement INotifyPropretyChanged (or something simmilar) instead of "calculate" button
-    //-create one simple textbox of results with line wraping instead of several separate labes for each line (what the hell was I thinking?)
-
+    //TODO: general ideas:     
+    //-play with senator alignement checkbox(one click method instead of two check/uncheck methods?), also some getter for current status of checkbox would be nice....        
+    //- for now things work, but it will be correct to play with events, so calculate button won´t be needed
+    //- play with visibility of UI elemnts (e.g. bold fontweight)
 
 
     /// <summary>
@@ -32,50 +30,31 @@ namespace RoRAssist.Pages
     {
         #region Fields
 
-        //display variables
-        string displayResultBaseNumber = "test1";
-        string displayResultDiceRoll = "testA";
-
         //input variables from UI
         bool senatorInFactionFlag;
+        bool eraEndCardDrawn;
 
-        
         #endregion
 
+        #region Constructors        
         /// <summary>
         /// PersuasionPage constructor
         /// </summary>
         public PersuasionPage()
         {
-            InitializeComponent();
-            //DataContext = this;
-            displayResults(displayResultBaseNumber,displayResultDiceRoll);             
+            InitializeComponent();            
+            calculateResults();      
         }
-
-        #region private methods
-        //TODO: (VM) Create method for displaying results in lower half of the screen (data binding...)
-
-        private void displayResults(string baseNumber, string diceRoll)
-        {
-            labelBaseNumber.DataContext = baseNumber;
-            labelDiceRoll.DataContext = diceRoll;
-        }
-        
         #endregion
 
-
-        #region Controllers
-        //TODO: Implement behaviour for changed values in one of boxes 
-        //(event handlers? ... alternative: simple button called "calculate")            
-
+        #region private methods
+        
         /// <summary>
-        /// Resolves behaviour of calculate button
+        /// Calculate Results
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void calculateButton_Click(object sender, RoutedEventArgs e)
+        private void calculateResults()
         {
-            //Get base number of persuation attemp
+            //get base number of persuation attemp
             int resultBaseNumber = Service.Calculations.CalculatePersuasionBaseNumber((int)setOratory.Value,
                 (int)setInfluence.Value,
                 (int)setBribe.Value,
@@ -84,25 +63,74 @@ namespace RoRAssist.Pages
                 (int)setCounterBribe.Value,
                 senatorInFactionFlag);
 
-            //TODO: implement final diceroll calculation
+            //get final diceroll value
+            int resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(resultBaseNumber, eraEndCardDrawn);
 
             //display aquired results
-            displayResults(resultBaseNumber.ToString(), senatorInFactionFlag.ToString());
+            displayResults(resultBaseNumber.ToString(), resultDiceRoll.ToString());
+        }
+
+        /// <summary>
+        /// Display results in XML window
+        /// </summary>
+        /// <param name="baseNumber">Base Number</param>
+        /// <param name="diceRoll">Final dice roll</param>
+        private void displayResults(string baseNumber, string diceRoll)
+        {
+           // labelBaseNumber.DataContext = baseNumber;
+            //labelDiceRoll.DataContext = diceRoll;
+
+            textBlockResultBaseNumber.DataContext = "Base number is " + baseNumber;
+            textBlockResultDiceRoll.DataContext = "You have to roll " + diceRoll +" or less on two dice";
+
+            //textblockResult.DataContext = "pokus" + 7 + " aa <LineBreak /> bb" + 45 +"CCC";
+        }
+        
+        #endregion
+
+
+        #region Controllers                
+
+        /// <summary>
+        /// Resolves behaviour of calculate button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void calculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            calculateResults();
         }        
 
         /// <summary>
-        /// Handling behaviour of senator alignement checkbox
+        /// Handle behaviour of senator alignement checkbox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void senatorAlignement_Checked(object sender, RoutedEventArgs e)
         {
-            senatorInFactionFlag = true;
+            senatorInFactionFlag = true;            
         }
+
         private void senatorAlignement_Unchecked(object sender, RoutedEventArgs e)
         {
             senatorInFactionFlag = false;
         }
         #endregion
+
+        /// <summary>
+        /// Handle behaviour of eraEnd checkbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void eraEnd_Checked(object sender, RoutedEventArgs e)
+        {
+            eraEndCardDrawn = true;
+        }
+
+        private void eraEnd_Unchecked(object sender, RoutedEventArgs e)
+        {
+            eraEndCardDrawn = false;
+        }
+        
     }
 }

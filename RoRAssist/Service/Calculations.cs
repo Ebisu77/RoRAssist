@@ -17,14 +17,14 @@ namespace RoRAssist.Service
         /// <summary>
         /// Calculates Base number for persuation attemp
         /// </summary>
-        /// <param name="attackingSenatorOratory">oratory of attackin senator</param>
-        /// <param name="attackingSenatorInfluence">influence of attackin senator</param>
-        /// <param name="attackingSenatorBribe">bibe invested by attacking senator</param>
+        /// <param name="attackingSenatorOratory">oratory of attacking senator</param>
+        /// <param name="attackingSenatorInfluence">influence of attacking senator</param>
+        /// <param name="attackingSenatorBribe">bribe invested by attacking senator</param>
         /// <param name="deffendingSenatorLoyalty">loyalty of defending senator</param>
         /// <param name="deffendingSenatorPersonalTreasury">personal treasury of defending senator</param>
         /// <param name="deffendingSenatorCounterBribe">counter bribe of defending senator</param>
         /// <param name="senatorAlignementStatus">status determining if defending senator is member of a faction</param>
-        /// <returns></returns>
+        /// <returns>result base number</returns>
         public static int CalculatePersuasionBaseNumber(int attackingSenatorOratory, int attackingSenatorInfluence, 
                 int attackingSenatorBribe, int deffendingSenatorLoyalty, int deffendingSenatorPersonalTreasury, 
                 int deffendingSenatorCounterBribe, bool senatorAlignementStatus)
@@ -49,6 +49,35 @@ namespace RoRAssist.Service
                         
                     return baseNumberResult;
                 }
+
+
+        public static int CalculatePersuasionDiceRoll(int persuasionBaseNumber, bool eraEndCardDrawn)
+        {
+
+            //calculate actual dice roll, return result
+            if (!eraEndCardDrawn)
+            {
+                if (persuasionBaseNumber <= 9)
+                {
+                    return persuasionBaseNumber;
+                }
+                else
+                {
+                    return 9;
+                }
+            }
+            else
+            {
+                if (persuasionBaseNumber <= 8)
+                {
+                    return persuasionBaseNumber;
+                }
+                else
+                {
+                    return 8;
+                }
+            }
+        }
             
             
         #endregion

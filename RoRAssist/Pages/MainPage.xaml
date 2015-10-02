@@ -5,13 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:RoRAssist.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="500"
+      d:DesignHeight="768" d:DesignWidth="1024"
       Title="MainPage">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="136" Margin="71,84,0,0" VerticalAlignment="Top" Width="168">
-            <Button x:Name="startButton"  Content="Start" Click="startButton_Click"/>
-            <Button x:Name="quitButton" Content="Quit" Click="quitButton_Click"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button x:Name="startButton"  Content="Start" 
+                    Margin="20"
+                    Click="startButton_Click"/>
+            <Button x:Name="quitButton" Content="Quit" 
+                    Margin="20"
+                    Click="quitButton_Click"/>
         </StackPanel>
 
     </Grid>
