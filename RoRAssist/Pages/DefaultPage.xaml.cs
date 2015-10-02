@@ -20,16 +20,45 @@ namespace RoRAssist.Pages
     /// </summary>
     public partial class DefaultPage : Page
     {
+
+
+        #region Constructors
+
+        /// <summary>
+        /// DefaultPage constructor
+        /// </summary>
         public DefaultPage()
         {
             InitializeComponent();
             
         }
 
-        private void clickPersuadeButton(object sender, RoutedEventArgs e)
+        #endregion
+
+        #region Controllers
+
+        /// <summary>
+        /// Load PersuasionPage into main frame
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void persuadeButton_Click(object sender, RoutedEventArgs e)
         {
             PersuasionPage page = new PersuasionPage();
             this.FrameGameplayContent.Navigate(page);
         }
+
+        /// <summary>
+        /// Load StateTreasuryPage into main frame
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void stateTreasuryButton_Click(object sender, RoutedEventArgs e)
+        {
+            StateTreasuryPage page = new StateTreasuryPage();
+            this.FrameGameplayContent.Navigate(page);
+        }
+
+        #endregion
     }
 }

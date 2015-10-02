@@ -45,9 +45,10 @@ namespace RoRAssist.Pages
             InitializeComponent();            
             calculateResults();      
         }
+
         #endregion
 
-        #region private methods
+        #region Private methods
         
         /// <summary>
         /// Calculate Results
@@ -71,24 +72,20 @@ namespace RoRAssist.Pages
         }
 
         /// <summary>
-        /// Display results in XML window
+        /// Display results in XAML window
         /// </summary>
         /// <param name="baseNumber">Base Number</param>
         /// <param name="diceRoll">Final dice roll</param>
         private void displayResults(string baseNumber, string diceRoll)
         {
-           // labelBaseNumber.DataContext = baseNumber;
-            //labelDiceRoll.DataContext = diceRoll;
-
+           
+            //display proper results in view
             textBlockResultBaseNumber.DataContext = "Base number is " + baseNumber;
-            textBlockResultDiceRoll.DataContext = "You have to roll " + diceRoll +" or less on two dice";
-
-            //textblockResult.DataContext = "pokus" + 7 + " aa <LineBreak /> bb" + 45 +"CCC";
+            textBlockResultDiceRoll.DataContext = "You have to roll " + diceRoll +" or less on two dice";            
         }
         
         #endregion
-
-
+        
         #region Controllers                
 
         /// <summary>
@@ -114,8 +111,7 @@ namespace RoRAssist.Pages
         private void senatorAlignement_Unchecked(object sender, RoutedEventArgs e)
         {
             senatorInFactionFlag = false;
-        }
-        #endregion
+        }       
 
         /// <summary>
         /// Handle behaviour of eraEnd checkbox
@@ -131,6 +127,8 @@ namespace RoRAssist.Pages
         {
             eraEndCardDrawn = false;
         }
-        
+
+        #endregion
+
     }
 }

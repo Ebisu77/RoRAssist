@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\StateTreasuryPage.xaml.cs">
+      <DependentUpon>StateTreasuryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service\Calculations.cs" />
     <Compile Include="Service\Constants.cs" />
     <Page Include="MainWindow.xaml">
@@ -81,6 +84,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PersuasionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StateTreasuryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
