@@ -21,6 +21,8 @@ namespace RoRAssist.Pages
     //-play with senator alignement checkbox(one click method instead of two check/uncheck methods?), also some getter for current status of checkbox would be nice....        
     //- for now things work, but it will be correct to play with events, so calculate button won´t be needed
     //- play with visibility of UI elemnts (e.g. bold fontweight)
+    //- play wit "graphic" of ui, eg.: lines or labels (attacking senator, defending senator)
+    //- dice roll below 2 should display special message
 
 
     /// <summary>
@@ -130,5 +132,6 @@ namespace RoRAssist.Pages
 
         #endregion
 
+        
     }
 }
