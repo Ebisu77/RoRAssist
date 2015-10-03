@@ -18,7 +18,8 @@ namespace RoRAssist.Pages
 {
 
     //TODO: general ideas:     
-    //-play with senator alignement checkbox(one click method instead of two check/uncheck methods?), also some getter for current status of checkbox would be nice....        
+    //-play with senator alignement checkbox(one click method instead of two check/uncheck methods?), 
+    //also some getter for current status of checkbox would be nice....        
     //- for now things work, but it will be correct to play with events, so calculate button won´t be needed
     //- play with visibility of UI elemnts (e.g. bold fontweight)
     //- play wit "graphic" of ui, eg.: lines or labels (attacking senator, defending senator)
@@ -35,6 +36,16 @@ namespace RoRAssist.Pages
         //input variables from UI
         bool senatorInFactionFlag;
         bool eraEndCardDrawn;
+        int oratoryValue;
+        int influenceValue;
+        int bribeValue;
+        int counterBribeValue;
+        int loyaltyValue;
+        int personalTreasuryValue;
+        
+        //output variables for display
+        int resultBaseNumber;
+        int resultDiceRoll;       
 
         #endregion
 
@@ -44,8 +55,11 @@ namespace RoRAssist.Pages
         /// </summary>
         public PersuasionPage()
         {
+
             InitializeComponent();            
-            calculateResults();      
+                        
+            calculateResults();
+            displayResults();            
         }
 
         #endregion
@@ -58,19 +72,18 @@ namespace RoRAssist.Pages
         private void calculateResults()
         {
             //get base number of persuation attemp
-            int resultBaseNumber = Service.Calculations.CalculatePersuasionBaseNumber((int)setOratory.Value,
-                (int)setInfluence.Value,
-                (int)setBribe.Value,
-                (int)setLoyalty.Value,
-                (int)setPersonalTreasury.Value,
-                (int)setCounterBribe.Value,
+            resultBaseNumber = Service.Calculations.CalculatePersuasionBaseNumber(
+                oratoryValue,
+                influenceValue,                
+                bribeValue,
+                loyaltyValue,
+                personalTreasuryValue,
+                counterBribeValue,
                 senatorInFactionFlag);
 
             //get final diceroll value
-            int resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(resultBaseNumber, eraEndCardDrawn);
-
-            //display aquired results
-            displayResults(resultBaseNumber.ToString(), resultDiceRoll.ToString());
+            resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(resultBaseNumber, eraEndCardDrawn);
+            
         }
 
         /// <summary>
@@ -78,27 +91,40 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="baseNumber">Base Number</param>
         /// <param name="diceRoll">Final dice roll</param>
-        private void displayResults(string baseNumber, string diceRoll)
+        private void displayResults()
         {
-           
-            //display proper results in view
-            textBlockResultBaseNumber.DataContext = "Base number is " + baseNumber;
-            textBlockResultDiceRoll.DataContext = "You have to roll " + diceRoll +" or less on two dice";            
+
+            //TODO: Ad logic for proper display of dice roll; e.g. message "dice roll not possible" 
+            //instead of negative numbers displayed
+            
+
+            //display results in view
+            if (textBlockResultBaseNumber != null)
+            {
+                textBlockResultBaseNumber.DataContext = "Base number is " + resultBaseNumber;            
+            }
+
+            if (textBlockResultDiceRoll != null)
+            {
+                if (resultDiceRoll >= 3)
+                {
+                    textBlockResultDiceRoll.DataContext = "You have to roll " + resultDiceRoll + " or less on two dice";
+                }
+                else if (resultDiceRoll == 2)
+                {
+                    textBlockResultDiceRoll.DataContext = "You have to roll " + resultDiceRoll + " on two dice";
+                }
+                else
+                {
+                    textBlockResultDiceRoll.DataContext = "Dice roll is not possible";
+                }
+                
+            }
         }
         
         #endregion
         
-        #region Controllers                
-
-        /// <summary>
-        /// Resolves behaviour of calculate button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void calculateButton_Click(object sender, RoutedEventArgs e)
-        {
-            calculateResults();
-        }        
+        #region Controllers    
 
         /// <summary>
         /// Handle behaviour of senator alignement checkbox
@@ -107,12 +133,16 @@ namespace RoRAssist.Pages
         /// <param name="e"></param>
         private void senatorAlignement_Checked(object sender, RoutedEventArgs e)
         {
-            senatorInFactionFlag = true;            
+            senatorInFactionFlag = true;
+            calculateResults();
+            displayResults();
         }
 
         private void senatorAlignement_Unchecked(object sender, RoutedEventArgs e)
         {
             senatorInFactionFlag = false;
+            calculateResults();
+            displayResults();
         }       
 
         /// <summary>
@@ -123,15 +153,53 @@ namespace RoRAssist.Pages
         private void eraEnd_Checked(object sender, RoutedEventArgs e)
         {
             eraEndCardDrawn = true;
+            calculateResults();
+            displayResults();
         }
 
         private void eraEnd_Unchecked(object sender, RoutedEventArgs e)
         {
             eraEndCardDrawn = false;
+            calculateResults();
+            displayResults();
         }
+
 
         #endregion
 
-        
+        //TODO: This looks terrible, doesn´t matter that it works. Rewrite. 
+        private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            
+
+            if (setOratory != null)
+            {
+                oratoryValue= (int)setOratory.Value;
+            }
+            if (setInfluence != null)
+            {
+                influenceValue = (int)setInfluence.Value;
+            }            
+            if (setBribe != null)
+            {
+                bribeValue = (int)setBribe.Value;
+            }
+            if (setLoyalty != null)
+            {
+                loyaltyValue = (int)setLoyalty.Value;
+            }
+            if (setPersonalTreasury != null)
+            {
+                personalTreasuryValue = (int)setPersonalTreasury.Value;
+            }
+            if (setCounterBribe != null)
+            {
+                counterBribeValue = (int)setCounterBribe.Value;
+            }
+
+
+            calculateResults();
+            displayResults();
+        }
     }
 }
