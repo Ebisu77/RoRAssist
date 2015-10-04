@@ -17,13 +17,10 @@ using Xceed.Wpf.Toolkit;
 namespace RoRAssist.Pages
 {
 
-    //TODO: general ideas:     
-    //-play with senator alignement checkbox(one click method instead of two check/uncheck methods?), 
-    //also some getter for current status of checkbox would be nice....        
-    //- for now things work, but it will be correct to play with events, so calculate button won´t be needed
+    //TODO: general ideas:             
     //- play with visibility of UI elemnts (e.g. bold fontweight)
-    //- play wit "graphic" of ui, eg.: lines or labels (attacking senator, defending senator)
-    //- dice roll below 2 should display special message
+    //- do "graphic" of ui, eg.: lines or labels (attacking senator, defending senator)
+    
 
 
     /// <summary>
@@ -42,10 +39,10 @@ namespace RoRAssist.Pages
         int counterBribeValue;
         int loyaltyValue;
         int personalTreasuryValue;
-        
+
         //output variables for display
         int resultBaseNumber;
-        int resultDiceRoll;       
+        int resultDiceRoll;
 
         #endregion
 
@@ -56,10 +53,10 @@ namespace RoRAssist.Pages
         public PersuasionPage()
         {
 
-            InitializeComponent();            
-                        
+            InitializeComponent();
+
             calculateResults();
-            displayResults();            
+            displayResults();
         }
 
         #endregion
@@ -98,12 +95,13 @@ namespace RoRAssist.Pages
             //instead of negative numbers displayed
             
 
-            //display results in view
+            //display results for base number in view
             if (textBlockResultBaseNumber != null)
             {
                 textBlockResultBaseNumber.DataContext = "Base number is " + resultBaseNumber;            
             }
 
+            //display results for dice roll in view
             if (textBlockResultDiceRoll != null)
             {
                 if (resultDiceRoll >= 3)
@@ -117,14 +115,13 @@ namespace RoRAssist.Pages
                 else
                 {
                     textBlockResultDiceRoll.DataContext = "Dice roll is not possible";
-                }
-                
+                }                
             }
         }
         
         #endregion
         
-        #region Controllers    
+        #region Events    
 
         /// <summary>
         /// Handle behaviour of senator alignement checkbox
@@ -143,6 +140,7 @@ namespace RoRAssist.Pages
             senatorInFactionFlag = false;
             calculateResults();
             displayResults();
+            
         }       
 
         /// <summary>
@@ -162,16 +160,17 @@ namespace RoRAssist.Pages
             eraEndCardDrawn = false;
             calculateResults();
             displayResults();
-        }
+        }        
 
-
-        #endregion
-
-        //TODO: This looks terrible, doesn´t matter that it works. Rewrite. 
+        /// <summary>
+        /// Support for reflecting changes in UI
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             
-
+            //reflect changes in UI            
             if (setOratory != null)
             {
                 oratoryValue= (int)setOratory.Value;
@@ -197,9 +196,11 @@ namespace RoRAssist.Pages
                 counterBribeValue = (int)setCounterBribe.Value;
             }
 
-
+            // recalculate and display new results
             calculateResults();
             displayResults();
         }
+
+        #endregion
     }
 }

@@ -15,14 +15,17 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>   
+        
         <Grid x:Name="ChildGrid" Grid.Row="1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>              
             </Grid.ColumnDefinitions>           
+            
             <StackPanel Grid.Column="0" Grid.Row="0" 
                         VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Label Content="Attacking senator" HorizontalAlignment="Center"/>
                 <DockPanel Margin="10">
                     <Label Content="Oratory: " HorizontalAlignment="Left"/>
                     <xctk:IntegerUpDown x:Name="setOratory" HorizontalAlignment="Right"
@@ -42,6 +45,7 @@
             
             <StackPanel Grid.Column="1" Grid.Row="0" 
                         VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Label Content="Defending senator" HorizontalAlignment="Center"/>
                 <DockPanel Margin="10">
                     <Label Content="Loyalty: " HorizontalAlignment="Right"
                            Width="auto"/>
@@ -68,7 +72,7 @@
                     <CheckBox x:Name="eraEnd" HorizontalAlignment="Left" 
                         Content=" Era End" Checked="eraEnd_Checked" Unchecked="eraEnd_Unchecked"/>
                 </DockPanel>
-            </StackPanel>
+            </StackPanel>            
        </Grid>
         
         <StackPanel Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center">           

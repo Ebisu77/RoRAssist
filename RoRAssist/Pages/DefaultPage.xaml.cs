@@ -29,13 +29,12 @@ namespace RoRAssist.Pages
         /// </summary>
         public DefaultPage()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
 
         #endregion
 
-        #region Controllers
+        #region Events
 
         /// <summary>
         /// Load PersuasionPage into main frame

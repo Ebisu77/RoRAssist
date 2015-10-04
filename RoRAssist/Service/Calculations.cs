@@ -15,7 +15,7 @@ namespace RoRAssist.Service
         #region Persuasion Page Calculations
 
         /// <summary>
-        /// Calculates Base number for persuation attemp
+        /// Calculates base number for persuation attemp
         /// </summary>
         /// <param name="attackingSenatorOratory">oratory of attacking senator</param>
         /// <param name="attackingSenatorInfluence">influence of attacking senator</param>
@@ -29,7 +29,7 @@ namespace RoRAssist.Service
                 int attackingSenatorBribe, int deffendingSenatorLoyalty, int deffendingSenatorPersonalTreasury, 
                 int deffendingSenatorCounterBribe, bool senatorAlignementStatus)
                 {
-                    //declaring calculation support
+                    //calculation support
                     int senatorAlignementValue;
                     int baseNumberResult; 
 
@@ -44,17 +44,23 @@ namespace RoRAssist.Service
                     }
 
                     //calculating result number and returning value
-                    baseNumberResult = (attackingSenatorOratory + attackingSenatorInfluence + attackingSenatorBribe) -
-                        (deffendingSenatorLoyalty + deffendingSenatorPersonalTreasury + deffendingSenatorCounterBribe + senatorAlignementValue);
+                    baseNumberResult = (attackingSenatorOratory + attackingSenatorInfluence 
+                        + attackingSenatorBribe) - (deffendingSenatorLoyalty + deffendingSenatorPersonalTreasury 
+                        + deffendingSenatorCounterBribe + senatorAlignementValue);
                         
                     return baseNumberResult;
                 }
 
-
+        /// <summary>
+        /// Calculates final dice roll needed for persuasion attemp
+        /// </summary>
+        /// <param name="persuasionBaseNumber">base number for calculation</param>
+        /// <param name="eraEndCardDrawn">determines if era ends</param>
+        /// <returns>final dice roll number</returns>
         public static int CalculatePersuasionDiceRoll(int persuasionBaseNumber, bool eraEndCardDrawn)
         {
 
-            //calculate actual dice roll, return result
+            //calculate dice roll, return result
             if (!eraEndCardDrawn)
             {
                 if (persuasionBaseNumber <= 9)
@@ -77,11 +83,9 @@ namespace RoRAssist.Service
                     return 8;
                 }
             }
-        }
-            
+        }            
             
         #endregion
-
 
     }
 }
