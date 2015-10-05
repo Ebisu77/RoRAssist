@@ -8,4 +8,3 @@
  
 # About developer  
 - I am learning programmer and board-games enthusiast, and this is my first stand-alone project. Please feel free to contact me on github (@Ebisu77) when you notice any bugs, errors or if you have ideas for this application. 
-- TODO: create and add e-mail contact once time for publish comes
