@@ -65,12 +65,14 @@
                         Value="1" Increment="1" ValueChanged="OnValueChanged"/>
                 </DockPanel>
                 <DockPanel Margin="10">
-                    <CheckBox x:Name="senatorAlignement" HorizontalAlignment="Left"
-                        Content=" Senator in Faction" Checked="senatorAlignement_Checked" Unchecked="senatorAlignement_Unchecked"/>
+                    <CheckBox x:Name="senatorAlignementCheckbox" HorizontalAlignment="Right"
+                        Content=" Senator in Faction" FlowDirection="RightToLeft"
+                        Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>
                 </DockPanel>
                 <DockPanel Margin="10">
-                    <CheckBox x:Name="eraEnd" HorizontalAlignment="Left" 
-                        Content=" Era End" Checked="eraEnd_Checked" Unchecked="eraEnd_Unchecked"/>
+                    <CheckBox x:Name="eraEndCheckbox" HorizontalAlignment="Right" 
+                        Content=" Era End" FlowDirection="RightToLeft"
+                        Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>
                 </DockPanel>
             </StackPanel>            
        </Grid>

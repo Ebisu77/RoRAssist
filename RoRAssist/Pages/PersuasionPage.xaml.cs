@@ -20,8 +20,7 @@ namespace RoRAssist.Pages
     //TODO: general ideas:             
     //- play with visibility of UI elemnts (e.g. bold fontweight)
     //- do "graphic" of ui, eg.: lines or labels (attacking senator, defending senator)
-    
-
+    //- calmp control values in UI (e.g. no negative numbers for personal treasury)
 
     /// <summary>
     /// Interaction logic for PersuasionPage.xaml
@@ -46,15 +45,14 @@ namespace RoRAssist.Pages
 
         #endregion
 
-        #region Constructors        
+        #region Constructors       
+         
         /// <summary>
         /// PersuasionPage constructor
         /// </summary>
         public PersuasionPage()
         {
-
             InitializeComponent();
-
             calculateResults();
             displayResults();
         }
@@ -79,22 +77,16 @@ namespace RoRAssist.Pages
                 senatorInFactionFlag);
 
             //get final diceroll value
-            resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(resultBaseNumber, eraEndCardDrawn);
-            
+            resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(
+                resultBaseNumber, eraEndCardDrawn);            
         }
 
         /// <summary>
         /// Display results in XAML window
         /// </summary>
-        /// <param name="baseNumber">Base Number</param>
-        /// <param name="diceRoll">Final dice roll</param>
         private void displayResults()
         {
-
-            //TODO: Ad logic for proper display of dice roll; e.g. message "dice roll not possible" 
-            //instead of negative numbers displayed
             
-
             //display results for base number in view
             if (textBlockResultBaseNumber != null)
             {
@@ -106,11 +98,13 @@ namespace RoRAssist.Pages
             {
                 if (resultDiceRoll >= 3)
                 {
-                    textBlockResultDiceRoll.DataContext = "You have to roll " + resultDiceRoll + " or less on two dice";
+                    textBlockResultDiceRoll.DataContext = "You have to roll " 
+                        + resultDiceRoll + " or less on two dice";
                 }
                 else if (resultDiceRoll == 2)
                 {
-                    textBlockResultDiceRoll.DataContext = "You have to roll " + resultDiceRoll + " on two dice";
+                    textBlockResultDiceRoll.DataContext = "You have to roll " 
+                        + resultDiceRoll + " on two dice";
                 }
                 else
                 {
@@ -118,52 +112,30 @@ namespace RoRAssist.Pages
                 }                
             }
         }
-        
+
         #endregion
-        
+
         #region Events    
 
         /// <summary>
-        /// Handle behaviour of senator alignement checkbox
+        /// Handles behaviour of checkboxes
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void senatorAlignement_Checked(object sender, RoutedEventArgs e)
-        {
-            senatorInFactionFlag = true;
+        private void OnCheckboxChanged(object sender, RoutedEventArgs e)
+        {            
+            senatorInFactionFlag = (senatorAlignementCheckbox.IsChecked.Value) ?
+                true : false;
+            eraEndCardDrawn = (eraEndCheckbox.IsChecked.Value) ?
+                true : false;
+
+            //reflect changes in UI
             calculateResults();
             displayResults();
         }
 
-        private void senatorAlignement_Unchecked(object sender, RoutedEventArgs e)
-        {
-            senatorInFactionFlag = false;
-            calculateResults();
-            displayResults();
-            
-        }       
-
         /// <summary>
-        /// Handle behaviour of eraEnd checkbox
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void eraEnd_Checked(object sender, RoutedEventArgs e)
-        {
-            eraEndCardDrawn = true;
-            calculateResults();
-            displayResults();
-        }
-
-        private void eraEnd_Unchecked(object sender, RoutedEventArgs e)
-        {
-            eraEndCardDrawn = false;
-            calculateResults();
-            displayResults();
-        }        
-
-        /// <summary>
-        /// Support for reflecting changes in UI
+        /// Support for reflecting changes in UI IntegerUpDow boxes
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -196,11 +168,12 @@ namespace RoRAssist.Pages
                 counterBribeValue = (int)setCounterBribe.Value;
             }
 
-            // recalculate and display new results
+            // reflect changes in UI
             calculateResults();
             displayResults();
         }
 
         #endregion
+                
     }
 }
