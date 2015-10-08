@@ -17,17 +17,18 @@ using Xceed.Wpf.Toolkit;
 namespace RoRAssist.Pages
 {
     //TODO: - use last year result as a new starting year treasury. 
-
+    //TODO: better UI (fonts, styles, background picture etc.)
 
     /// <summary>
     /// Interaction logic for StateTreasuryPage.xaml
     /// </summary>
     public partial class StateTreasuryPage : Page
     {
+
         #region Fields
         
         //general income
-        int stateOfTreasury;
+        int startingStateOfTreasury;
         int annualRevenue;
         int contributions;
 
@@ -35,6 +36,9 @@ namespace RoRAssist.Pages
         int activeWars;
         int legions;
         int fleets;
+
+        //support for display of results
+        int stateOfTreasuryTotal;
         int stateOfTreasuryChange;
 
         //provinces
@@ -85,27 +89,25 @@ namespace RoRAssist.Pages
         /// </summary>
         private void calculateResults()
         {
-            int generalIncome = Service.Calculations.CalculateTreasuryBasicIncome(stateOfTreasury, 
+            //calculates different incomes and expenses
+            int generalIncome = Service.Calculations.CalculateTreasuryBasicIncome(startingStateOfTreasury, 
                 annualRevenue, contributions);
-            int generalExpenses = Service.Calculations.CalculateTreasuryBasicExpenses(activeWars,
-                legions, fleets);
-
-            //TODO: calculate provinces together
             int provincesIncome = Service.Calculations.CalculateTreasuryProvinces(africa, asia, bithynia,
                 cilicia, crete, gaulCisalpine, gaulNarbonese, gaulTransalpine, grece, illyricum,
                 sardinia, sicily, spainFurther, spainNearer, syria);
-
-            //TODO: Calculate land bills together
+            int generalExpenses = Service.Calculations.CalculateTreasuryBasicExpenses(activeWars,
+                legions, fleets);                        
             int landbillsExpense = Service.Calculations.ClaculateTreasuryLandBills
                 (landbill1, landbill2a, landbill2b, landbill3a, landbill3b, landbill3c);
 
-            //calculates change in state treasury
-            stateOfTreasuryChange = Service.Calculations.CalculateTreasuryTotal(
+            //calculates final state of treasury
+            stateOfTreasuryTotal = Service.Calculations.CalculateTreasuryTotal(
                 generalIncome, provincesIncome, generalExpenses, landbillsExpense);
 
-            //TODO: calculate new value of treasury after change
+            //calculate change in treasury
+            stateOfTreasuryChange = Service.Calculations.CalculateTreasuryChange(startingStateOfTreasury, stateOfTreasuryTotal);
 
-
+            //reflect changes in UI
             displayResults();
         }
 
@@ -114,13 +116,31 @@ namespace RoRAssist.Pages
         /// </summary>
         private void displayResults()
         {
-            //TODO: make proper displays
+            //display change in treasury
             if (treasuryChangeLabel != null)
             {
-                treasuryChangeLabel.DataContext = stateOfTreasuryChange;;
+                if (stateOfTreasuryChange > 1 || stateOfTreasuryChange == 0 || stateOfTreasuryChange < -1)
+                {
+                    treasuryChangeLabel.DataContext = "This year change is " + stateOfTreasuryChange + " talents";
+                }
+                else
+                {
+                    treasuryChangeLabel.DataContext = "This year change is " + stateOfTreasuryChange + " talent";
+                }
+            }
+
+            //display final state of treasury
+            if (treasuryResultLabel != null)
+            {
+                if (stateOfTreasuryTotal > 1 || stateOfTreasuryTotal == 0 || stateOfTreasuryTotal < -1)
+                {
+                    treasuryResultLabel.DataContext = "Republic of Rome has " + stateOfTreasuryTotal + " talents";
+                }
+                else
+                {
+                    treasuryResultLabel.DataContext = "Republic of Rome has " + stateOfTreasuryTotal + " talent";
+                }                 
             }       
-            
-            //TODO: display new status of state treasury     
         }
 
         #endregion
@@ -128,7 +148,7 @@ namespace RoRAssist.Pages
         #region Events       
 
         /// <summary>
-        /// Reflects changes in UI
+        /// Handle integerUpDown changes in UI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -137,7 +157,7 @@ namespace RoRAssist.Pages
             //changes in general income area
             if (incomeStateOfTreasuryBeginning != null)
             {
-                stateOfTreasury = (int)incomeStateOfTreasuryBeginning.Value;
+                startingStateOfTreasury = (int)incomeStateOfTreasuryBeginning.Value;
             }
             if (incomeAnnualRevenue != null)
             {
@@ -224,19 +244,19 @@ namespace RoRAssist.Pages
                 syria = (int)incomeProvinceSyria.Value;
             }
 
-            //TODO: changes in land bills
-
             //reflect changes in calculations and UI
             calculateResults();
             displayResults();
-
         }
-
-        #endregion
-
+                
+        /// <summary>
+        /// Handle checkbox changes in UI
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnCheckboxChanged(object sender, RoutedEventArgs e)
         {
-            
+            //set flags of individual land bills
             landbill1 = (checkboxLandbill_1.IsChecked.Value) ?
                 true : false;
             landbill2a = (checkboxLandbill_2a.IsChecked.Value) ?
@@ -250,13 +270,12 @@ namespace RoRAssist.Pages
             landbill3c = (checkboxLandbill_3c.IsChecked.Value) ?
                 true : false;
 
+            //reflect changes in calculations and UI
             calculateResults();
             displayResults();
         }
 
-        private void OnCheckboxUnchecked(object sender, RoutedEventArgs e)
-        {
+        #endregion
 
-        }
     }
 }

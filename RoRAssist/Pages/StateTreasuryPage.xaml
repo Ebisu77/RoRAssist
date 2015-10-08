@@ -205,6 +205,9 @@
                               Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>                                
             </StackPanel>
         </Grid>
-        <Label x:Name="treasuryChangeLabel" Content="{Binding}" HorizontalAlignment="Left" Margin="562,116,0,-114" Grid.Row="4" VerticalAlignment="Top"/>
+        <StackPanel Grid.Row="4" >
+            <Label x:Name="treasuryChangeLabel" Content="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label x:Name="treasuryResultLabel" Content="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>        
     </Grid>
 </Page>

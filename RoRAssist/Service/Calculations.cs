@@ -115,6 +115,17 @@ namespace RoRAssist.Service
             return basicIncome + provinces - basicExpenses - landbills;            
         }
 
+        /// <summary>
+        /// Calculate change between beggining and final state of treasury
+        /// </summary>
+        /// <param name="startingTreasury"></param>
+        /// <param name="finalTreasury"></param>
+        /// <returns>change in treasury</returns>
+        public static int CalculateTreasuryChange(int startingTreasury, int finalTreasury)
+        {
+            return finalTreasury - startingTreasury;
+        }
+
         #endregion
 
         #region Persuasion Calculations
