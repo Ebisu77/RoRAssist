@@ -118,8 +118,8 @@ namespace RoRAssist.Service
         /// <summary>
         /// Calculate change between beggining and final state of treasury
         /// </summary>
-        /// <param name="startingTreasury"></param>
-        /// <param name="finalTreasury"></param>
+        /// <param name="startingTreasury">state of treasury at the beginning</param>
+        /// <param name="finalTreasury">state of treasury at the end</param>
         /// <returns>change in treasury</returns>
         public static int CalculateTreasuryChange(int startingTreasury, int finalTreasury)
         {

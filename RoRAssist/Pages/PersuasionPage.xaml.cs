@@ -122,7 +122,7 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnCheckboxChanged(object sender, RoutedEventArgs e)
+        private void onCheckboxChanged(object sender, RoutedEventArgs e)
         {            
             senatorInFactionFlag = (senatorAlignementCheckbox.IsChecked.Value) ?
                 true : false;
@@ -139,7 +139,7 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void onValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             
             //reflect changes in UI            

@@ -152,7 +152,7 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void onValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             //changes in general income area
             if (incomeStateOfTreasuryBeginning != null)
@@ -254,7 +254,7 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnCheckboxChanged(object sender, RoutedEventArgs e)
+        private void onCheckboxChanged(object sender, RoutedEventArgs e)
         {
             //set flags of individual land bills
             landbill1 = (checkboxLandbill_1.IsChecked.Value) ?
