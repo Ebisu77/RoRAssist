@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\PersuasionPage.xaml.cs">
+      <DependentUpon>PersuasionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\StateTreasuryPage.xaml.cs">
       <DependentUpon>StateTreasuryPage.xaml</DependentUpon>
     </Compile>
@@ -98,9 +101,6 @@
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PersuasionPage.xaml.cs">
-      <DependentUpon>PersuasionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

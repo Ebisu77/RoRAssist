@@ -180,7 +180,7 @@
                     <Label Content="Spain Nearer: "/>
                     <xctk:IntegerUpDown x:Name="incomeProvinceSpainNearer" 
                            HorizontalAlignment="Center" VerticalAlignment="Center"
-                           Increment="1" Value="0" ValueChanged="OnValueChanged"/>
+                           Increment="1" Value="0" ValueChanged="OnValueChanged" />
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <Label Content="Syria: "/>
@@ -191,18 +191,12 @@
             </StackPanel>
             <StackPanel Grid.Column="2" Grid.ColumnSpan="3"
                         HorizontalAlignment="Center">                
-                    <CheckBox x:Name="checkboxLandbill_1" Content="I " FlowDirection="RightToLeft"
-                              Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>
-                    <CheckBox x:Name="checkboxLandbill_2a" Content="II " FlowDirection="RightToLeft"
-                              Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>
-                    <CheckBox x:Name="checkboxLandbill_2b" Content="II " FlowDirection="RightToLeft"
-                              Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>                
-                    <CheckBox x:Name="checkboxLandbill_3a" Content="III " FlowDirection="RightToLeft"                              
-                              Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>                
-                    <CheckBox x:Name="checkboxLandbill_3b" Content="III " FlowDirection="RightToLeft"
-                              Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>                
-                    <CheckBox x:Name="checkboxLandbill_3c" Content="III " FlowDirection="RightToLeft"
-                              Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>                                
+                    <CheckBox x:Name="checkboxLandbill_1" Content="I " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>
+                    <CheckBox x:Name="checkboxLandbill_2a" Content="II " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>
+                    <CheckBox x:Name="checkboxLandbill_2b" Content="II " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                
+                    <CheckBox x:Name="checkboxLandbill_3a" Content="III " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                
+                    <CheckBox x:Name="checkboxLandbill_3b" Content="III " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                
+                    <CheckBox x:Name="checkboxLandbill_3c" Content="III " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                                
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="4" >

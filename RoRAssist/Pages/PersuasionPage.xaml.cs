@@ -46,7 +46,7 @@ namespace RoRAssist.Pages
         #endregion
 
         #region Constructors       
-         
+
         /// <summary>
         /// PersuasionPage constructor
         /// </summary>
@@ -60,7 +60,7 @@ namespace RoRAssist.Pages
         #endregion
 
         #region Private methods
-        
+
         /// <summary>
         /// Calculate Results
         /// </summary>
@@ -69,7 +69,7 @@ namespace RoRAssist.Pages
             //get base number of persuation attemp
             resultBaseNumber = Service.Calculations.CalculatePersuasionBaseNumber(
                 oratoryValue,
-                influenceValue,                
+                influenceValue,
                 bribeValue,
                 loyaltyValue,
                 personalTreasuryValue,
@@ -78,7 +78,7 @@ namespace RoRAssist.Pages
 
             //get final diceroll value
             resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(
-                resultBaseNumber, eraEndCardDrawn);            
+                resultBaseNumber, eraEndCardDrawn);
         }
 
         /// <summary>
@@ -86,11 +86,11 @@ namespace RoRAssist.Pages
         /// </summary>
         private void displayResults()
         {
-            
+
             //display results for base number in view
             if (textBlockResultBaseNumber != null)
             {
-                textBlockResultBaseNumber.DataContext = "Base number is " + resultBaseNumber;            
+                textBlockResultBaseNumber.DataContext = "Base number is " + resultBaseNumber;
             }
 
             //display results for dice roll in view
@@ -98,18 +98,18 @@ namespace RoRAssist.Pages
             {
                 if (resultDiceRoll >= 3)
                 {
-                    textBlockResultDiceRoll.DataContext = "You have to roll " 
+                    textBlockResultDiceRoll.DataContext = "You have to roll "
                         + resultDiceRoll + " or less on two dice";
                 }
                 else if (resultDiceRoll == 2)
                 {
-                    textBlockResultDiceRoll.DataContext = "You have to roll " 
+                    textBlockResultDiceRoll.DataContext = "You have to roll "
                         + resultDiceRoll + " on two dice";
                 }
                 else
                 {
                     textBlockResultDiceRoll.DataContext = "Dice roll is not possible";
-                }                
+                }
             }
         }
 
@@ -122,8 +122,8 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void onCheckboxChanged(object sender, RoutedEventArgs e)
-        {            
+        private void OnCheckboxChanged(object sender, RoutedEventArgs e)
+        {
             senatorInFactionFlag = (senatorAlignementCheckbox.IsChecked.Value) ?
                 true : false;
             eraEndCardDrawn = (eraEndCheckbox.IsChecked.Value) ?
@@ -139,18 +139,18 @@ namespace RoRAssist.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void onValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            
+
             //reflect changes in UI            
             if (setOratory != null)
             {
-                oratoryValue= (int)setOratory.Value;
+                oratoryValue = (int)setOratory.Value;
             }
             if (setInfluence != null)
             {
                 influenceValue = (int)setInfluence.Value;
-            }            
+            }
             if (setBribe != null)
             {
                 bribeValue = (int)setBribe.Value;
@@ -174,6 +174,6 @@ namespace RoRAssist.Pages
         }
 
         #endregion
-                
+
     }
 }
