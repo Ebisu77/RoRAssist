@@ -58,6 +58,18 @@ namespace RoRAssist.Pages
             this.FrameGameplayContent.Navigate(page);
         }
 
+        /// <summary>
+        /// Load SenatePage into main frame
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void senateButton_Click(object sender, RoutedEventArgs e)
+        {
+            SenatePage page = new SenatePage();
+            this.FrameGameplayContent.Navigate(page);
+        }
+
         #endregion
+
     }
 }

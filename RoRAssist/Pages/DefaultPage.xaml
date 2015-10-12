@@ -18,7 +18,7 @@
             <Button x:Name="turnOrderButton" Content ="Turn Order" Width="Auto"/>
             <Button x:Name="stateTreasuryButton" Content="State Treasury" Width="Auto" Click="stateTreasuryButton_Click"/>
             <Button x:Name="persuadeButton" Content="Persuasion" Width="Auto" Click="persuadeButton_Click"  />
-            <Button x:Name="senateButton" Content="Senate" Width="Auto"/>
+            <Button x:Name="senateButton" Content="Senate" Width="Auto" Click="senateButton_Click" />
             <Button x:Name="combatButton" Content="Combat" Width="Auto"/>
         </StackPanel>
         <Frame Name="FrameGameplayContent" Grid.Row="1" />

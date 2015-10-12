@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Xceed.Wpf.Toolkit;
 
 namespace RoRAssist.Pages
 {
@@ -21,27 +22,10 @@ namespace RoRAssist.Pages
     public partial class SenatePage : Page
     {
 
-        #region Fields
 
-
-
-        #endregion
-
-        #region Constructors
-
-        /// <summary>
-        /// SenatePage constructor
-        /// </summary>
         public SenatePage()
         {
             InitializeComponent();
         }
-
-        #endregion
-
-        #region Private methods
-
-
-        #endregion
     }
 }

@@ -83,3 +83,5 @@ C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssis
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist.csprojResolveAssemblyReference.cache
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\PersuasionPage.g.cs
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\PersuasionPage.baml
+C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\SenatePage.g.cs
+C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\SenatePage.baml
