@@ -20,22 +20,54 @@ namespace RoRAssist.Pages
     /// </summary>
     public partial class MainPage : Page
     {
+
+        #region Constructors
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();
         }
 
-        
+        #endregion
 
-        private void startButton_Click(object sender, RoutedEventArgs e)
+        #region Events
+
+        /// <summary>
+        /// Handling of continue button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void continueButton_Click(object sender, RoutedEventArgs e)
         {
             DefaultPage newPage = new DefaultPage();
             this.NavigationService.Navigate(newPage);
         }
 
+        /// <summary>
+        /// Handling of start button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            PlayersInputPage newPage = new PlayersInputPage();
+            this.NavigationService.Navigate(newPage);
+        }
+
+        /// <summary>
+        /// Handling of quit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
             App.Current.Shutdown();
         }
+
+        #endregion
+
     }
 }

@@ -19,5 +19,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlockTest" Text="{Binding}" 
+                   Grid.Column="1" HorizontalAlignment="Left" Margin="133,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>

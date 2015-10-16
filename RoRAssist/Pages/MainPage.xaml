@@ -8,9 +8,11 @@
       d:DesignHeight="768" d:DesignWidth="1024"
       Title="MainPage">
 
-    <Grid>
+    <Grid Name="mainGrid">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
-            <Button x:Name="startButton"  Content="Start" 
+            <Button x:Name="continueButton"  Content="Continue Session" 
+                    Margin="20" Click="continueButton_Click"                    />
+            <Button x:Name="startButton"  Content="New Session" 
                     Margin="20"
                     Click="startButton_Click"/>
             <Button x:Name="quitButton" Content="Quit" 
