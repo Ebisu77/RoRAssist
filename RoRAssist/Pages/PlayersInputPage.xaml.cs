@@ -23,21 +23,23 @@ namespace RoRAssist.Pages
     public partial class PlayersInputPage : Page
     {
         //TODO: make boxes for player apear and dissapear based on number of players chosen
-        //probably use style triggers?
-        //TODO: implement special cases of solitare and 2-player game
+        //probably use style triggers
+        //TODO: implement special cases of solitare and 2-player game (checkboxes?, maybe tooltips 
+        //when 1or2 players are chosen in box)
+        //TODO: clamp min/max number of players in UI (1-6 or 3-6 depending on solitaire solution)
 
-
-        #region Fields
-
-        int playersCount;
-        string playerName1, playerName2, playerName3, playerName4, playerName5, playerName6;
+        #region Fields        
+                
+        //declare total number of players and names of players
+        int playersCount;        
+        string[] names = new string[6];
 
         #endregion
-        
+
         #region Constructors
 
         /// <summary>
-        /// Constructor
+        /// Constructor for PlayersInputPage
         /// </summary>
         public PlayersInputPage()
         {
@@ -53,17 +55,36 @@ namespace RoRAssist.Pages
         /// </summary>
         private void saveData()
         {
-            // Create an instance of XML document 
+            //create an instance of XML document 
             XmlDocument doc = new XmlDocument(); 
             doc.Load(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");
 
             //save number of players into XML
-            XmlElement xElementCount = doc.SelectSingleNode("/players/numberOfPlayers") as XmlElement;
-            xElementCount.InnerText = playersCount.ToString();
+            XmlNode xmlPlayersCount = doc.SelectSingleNode("/content/numberOfPlayers");
+            xmlPlayersCount.InnerText = playersCount.ToString();
 
-            //TODO: save names of players
-            XmlElement xElementPlayers = doc.SelectSingleNode("/players/player") as XmlElement;
+            //delete all old player names
+            XmlNode xmlPlayers = doc.SelectSingleNode("/content/players");
+            xmlPlayers.RemoveAll();
 
+            //save new player names
+            int count = 0;
+            foreach (string name in names)
+            {
+                if (name != null)
+                {
+                    XmlNode node = doc.SelectSingleNode("/content/players");
+                    XmlElement element = doc.CreateElement("player");
+
+                    element.InnerText = name;
+                    element.SetAttribute("playerID", count.ToString());
+                    node.AppendChild(element);
+
+                    count++;
+                }
+            }
+            
+            //save results
             doc.Save(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");
         }       
 
@@ -77,27 +98,27 @@ namespace RoRAssist.Pages
         }
 
         /// <summary>
-        /// Handle click on finished button
+        /// Handle click on done button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
-            //Save User input into variable
+            //save User input into variables
             if (playersCountUpDownButton != null)            
                 playersCount = (int)playersCountUpDownButton.Value;
             if (textboxPlayer1 != null)
-                playerName1 = textboxPlayer1.Text;
+                names[0] = textboxPlayer1.Text;
             if (textboxPlayer2 != null)
-                playerName2 = textboxPlayer2.Text;
+                names[1] = textboxPlayer2.Text;
             if (textboxPlayer3 != null)
-                playerName3 = textboxPlayer3.Text;
+                names[2] = textboxPlayer3.Text;
             if (textboxPlayer4 != null)
-                playerName4 = textboxPlayer4.Text;
+                names[3] = textboxPlayer4.Text;
             if (textboxPlayer5 != null)
-                playerName5 = textboxPlayer5.Text;
+                names[4] = textboxPlayer5.Text;
             if (textboxPlayer6 != null)
-                playerName6 = textboxPlayer6.Text;
+                names[5] = textboxPlayer6.Text;
 
             //save aquired data
             saveData();

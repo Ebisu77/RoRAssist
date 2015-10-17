@@ -19,7 +19,15 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlockTest" Text="{Binding}" 
-                   Grid.Column="1" HorizontalAlignment="Left" Margin="133,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1">            
+            <Label Name="labelPlayer_1" Content="{Binding}"/>
+            <Label Name="labelPlayer_2" Content="{Binding}"/>
+            <Label Name="labelPlayer_3" Content="{Binding}"/>
+            <Label Name="labelPlayer_4" Content="{Binding}"/>
+            <Label Name="labelPlayer_5" Content="{Binding}"/>
+            <Label Name="labelPlayer_6" Content="{Binding}"/>
+        </StackPanel>
+        
+        
     </Grid>
 </Page>

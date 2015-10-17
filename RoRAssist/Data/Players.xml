@@ -1,27 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<players>
-  <numberOfPlayers>5</numberOfPlayers>
-  <player id="player1">
-    <name>Evka</name>
-  </player>
-  <player id="player2">
-    <name>
-    </name>
-  </player>
-  <player id="player3">
-    <name>
-    </name>
-  </player>
-  <player id="player4">
-    <name>
-    </name>
-  </player>
-  <player id="player5">
-    <name>
-    </name>
-  </player>
-  <player id="player6">
-    <name>
-    </name>
-  </player>
-</players>
+<content>
+  <numberOfPlayers>6</numberOfPlayers>
+  <players>
+    <player playerID="0">Evka</player>
+    <player playerID="1">Mario</player>
+    <player playerID="2">Miska</player>
+    <player playerID="3">Baudewijn</player>
+    <player playerID="4">Tomas</player>
+    <player playerID="5">Mato</player>
+  </players>
+</content>
