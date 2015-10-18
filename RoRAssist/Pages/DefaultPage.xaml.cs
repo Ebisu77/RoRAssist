@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 
 namespace RoRAssist.Pages
 {
+
     /// <summary>
     /// Interaction logic for DefaultPage.xaml    
     /// </summary>
     public partial class DefaultPage : Page
     {
-
 
         #region Constructors
 
@@ -58,6 +58,18 @@ namespace RoRAssist.Pages
             this.FrameGameplayContent.Navigate(page);
         }
 
+        /// <summary>
+        /// Load SenatePage into main frame
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void senateButton_Click(object sender, RoutedEventArgs e)
+        {
+            SenatePage page = new SenatePage();
+            this.FrameGameplayContent.Navigate(page);
+        }
+
         #endregion
+
     }
 }
