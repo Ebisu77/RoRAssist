@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<content>
+  <numberOfPlayers>6</numberOfPlayers>
+  <players>
+    <player playerID="0">Bob</player>
+    <player playerID="1">Tim</player>
+    <player playerID="2">Joe</player>
+    <player playerID="3">Eva</player>
+    <player playerID="4">Ian</player>
+    <player playerID="5">Leo</player>
+  </players>
+</content>
