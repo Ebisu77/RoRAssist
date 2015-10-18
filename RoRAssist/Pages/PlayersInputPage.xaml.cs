@@ -68,17 +68,20 @@ namespace RoRAssist.Pages
             int count = 0;
             foreach (string name in names)
             {
-                if (name != null)
+                if (name == null)
                 {
-                    XmlNode node = doc.SelectSingleNode("/content/players");
-                    XmlElement element = doc.CreateElement("player");
-
-                    element.InnerText = name;
-                    element.SetAttribute("playerID", count.ToString());
-                    node.AppendChild(element);
-
                     count++;
-                }
+                    continue;
+                }                    
+
+                XmlNode node = doc.SelectSingleNode("/content/players");
+                XmlElement element = doc.CreateElement("player");
+
+                element.InnerText = name;
+                element.SetAttribute("playerID", count.ToString());
+                node.AppendChild(element);
+
+                count++;
             }
             
             //save results
@@ -91,6 +94,9 @@ namespace RoRAssist.Pages
         private void displayPlayerTextboxes()
         {
             playersCount = (int)playersCountUpDownButton.Value;
+
+
+            //playerID = '" + i + "'
 
             if (dockPanelPlayer_1 != null)
                 dockPanelPlayer_1.Visibility = (playersCount > 0) ?

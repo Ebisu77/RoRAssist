@@ -22,7 +22,7 @@
                     <Label Content="player 1"/>
                     <TextBox Name="textboxPlayer1"/>
                 </DockPanel>
-                <DockPanel Name="dockPanelPlayer_2" Visibility="Visible">
+                <DockPanel  Name="dockPanelPlayer_2" Visibility="Visible">
                     <Label Content="player 2"/>
                     <TextBox Name="textboxPlayer2"/>
                 </DockPanel>

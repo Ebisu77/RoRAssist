@@ -21,6 +21,8 @@ namespace RoRAssist.Pages
     public partial class MainPage : Page
     {
 
+        //TODO: Gray out "continue" button if this is first game ever (check data?)
+
         #region Constructors
 
         /// <summary>

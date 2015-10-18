@@ -23,10 +23,13 @@ namespace RoRAssist.Pages
     public partial class SenatePage : Page
     {
 
+        //TODO: add visibility of element based on number of players
+
         #region Fields
 
         //data support
-        string[] playerNames = new string[6];
+        int playersCount;
+        string[] playerNames = new string[6];        
 
         #endregion
 
@@ -51,12 +54,51 @@ namespace RoRAssist.Pages
         /// </summary>
         private void displayResults()
         {
-            labelPlayer_1.DataContext = playerNames[0];
-            labelPlayer_2.DataContext = playerNames[1];
-            labelPlayer_3.DataContext = playerNames[2];
-            labelPlayer_4.DataContext = playerNames[3];
-            labelPlayer_5.DataContext = playerNames[4];
-            labelPlayer_6.DataContext = playerNames[5];
+            //set visibility of stackpanels
+            if (stackPlayer1 != null)            
+            {
+                stackPlayer1.Visibility = (playersCount > 0) ?
+                Visibility.Visible : Visibility.Hidden;
+            }
+            if (stackPlayer2 != null)
+            {
+                stackPlayer2.Visibility = (playersCount > 1) ?
+                Visibility.Visible : Visibility.Hidden;
+            }
+            if (stackPlayer3 != null)
+            {
+                stackPlayer3.Visibility = (playersCount > 2) ?
+                Visibility.Visible : Visibility.Hidden;
+            }
+            if (stackPlayer4 != null)
+            {
+                stackPlayer4.Visibility = (playersCount > 3) ?
+                Visibility.Visible : Visibility.Hidden;
+            }
+            if (stackPlayer5 != null)
+            {
+                stackPlayer5.Visibility = (playersCount > 4) ?
+                Visibility.Visible : Visibility.Hidden;
+            }
+            if (stackPlayer6 != null)
+            {
+                stackPlayer6.Visibility = (playersCount > 5) ?
+                Visibility.Visible : Visibility.Hidden;
+            }            
+
+            //show proper player names in labels
+            if (labelPlayer_1 != null)
+                labelPlayer_1.DataContext = playerNames[0];
+            if (labelPlayer_2 != null)
+                labelPlayer_2.DataContext = playerNames[1];
+            if (labelPlayer_3 != null)
+                labelPlayer_3.DataContext = playerNames[2];
+            if (labelPlayer_4 != null)
+                labelPlayer_4.DataContext = playerNames[3];
+            if (labelPlayer_5 != null)
+                labelPlayer_5.DataContext = playerNames[4];
+            if (labelPlayer_6 != null)
+                labelPlayer_6.DataContext = playerNames[5];
         }
 
         /// <summary>
@@ -66,12 +108,13 @@ namespace RoRAssist.Pages
         {
             //create an instance of xml document
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");           
+            xmlDoc.Load(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");
 
-            //TODO: retrieve number of players
+            //retrieve number of players
+            playersCount = Convert.ToInt32(xmlDoc.SelectSingleNode("//numberOfPlayers").InnerText);
 
             //retrieve player names and save them into array
-            for (int i = 0, playerCount = playerNames.Length; i < playerCount; i++)
+            for (int i = 0; i < playersCount; i++)
             {
                 XmlElement element = xmlDoc.SelectSingleNode("//*[@playerID='" + i + "']") as XmlElement;
                 playerNames[i] = element.InnerText;
@@ -80,5 +123,13 @@ namespace RoRAssist.Pages
 
         #endregion
 
+        #region Events
+
+        private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
+
+        #endregion
     }
 }

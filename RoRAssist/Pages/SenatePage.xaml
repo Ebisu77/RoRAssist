@@ -19,13 +19,74 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1">            
-            <Label Name="labelPlayer_1" Content="{Binding}"/>
-            <Label Name="labelPlayer_2" Content="{Binding}"/>
-            <Label Name="labelPlayer_3" Content="{Binding}"/>
-            <Label Name="labelPlayer_4" Content="{Binding}"/>
-            <Label Name="labelPlayer_5" Content="{Binding}"/>
-            <Label Name="labelPlayer_6" Content="{Binding}"/>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Right">
+            
+            <StackPanel Name="stackLabels" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">
+                <Label Content="Names"/>
+                <Label Content="Oratory"/>
+                <Label Content="Knights"/>
+                <Label Content="Talents"/>                
+            </StackPanel>
+            
+            <StackPanel Name="stackPlayer1" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">
+                <Label Name="labelPlayer_1" Content="{Binding}"/>
+                <xctk:IntegerUpDown x:Name="oratoryUpDown_player1" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="knightsUpDown_player1" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="talentsUpDown_player1" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+            </StackPanel>
+
+            <StackPanel Name="stackPlayer2" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">                
+                <Label Name="labelPlayer_2" Content="{Binding}"/>
+                <xctk:IntegerUpDown x:Name="oratoryUpDown_player2" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="knightsUpDown_player2" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="talentsUpDown_player2" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+            </StackPanel>
+
+            <StackPanel Name="stackPlayer3" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">
+                <Label Name="labelPlayer_3" Content="{Binding}"/>
+                <xctk:IntegerUpDown x:Name="oratoryUpDown_player3" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="knightsUpDown_player3" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="talentsUpDown_player3" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+            </StackPanel>
+
+            <StackPanel Name="stackPlayer4" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">
+                <Label Name="labelPlayer_4" Content="{Binding}"/>
+                <xctk:IntegerUpDown x:Name="oratoryUpDown_player4" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="knightsUpDown_player4" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="talentsUpDown_player4" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+            </StackPanel>
+
+            <StackPanel Name="stackPlayer5" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">
+                <Label Name="labelPlayer_5" Content="{Binding}"/>
+                <xctk:IntegerUpDown x:Name="oratoryUpDown_player5" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="knightsUpDown_player5" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="talentsUpDown_player5" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+            </StackPanel>
+
+            <StackPanel Name="stackPlayer6" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Right">
+                <Label Name="labelPlayer_6" Content="{Binding}"/>
+                <xctk:IntegerUpDown x:Name="oratoryUpDown_player6" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="knightsUpDown_player6" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+                <xctk:IntegerUpDown x:Name="talentsUpDown_player6" 
+                      Value="0" Increment="1" ValueChanged="OnValueChanged" />
+            </StackPanel>
         </StackPanel>
         
         

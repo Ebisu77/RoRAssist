@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="RoRAssist.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="RoRAssist" version="0.1.1.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="RoRAssist" version="0.2.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="RoRAssist.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoRAssist.exe" size="47536">
-      <assemblyIdentity name="RoRAssist" version="0.1.1.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoRAssist.exe" size="53168">
+      <assemblyIdentity name="RoRAssist" version="0.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hdtOy1k0j1YuaPraAPSwqE+gY8mzBgr2mvZLBL1w4ok=</dsig:DigestValue>
+        <dsig:DigestValue>EcYvMPGnp6ZaDQvO+Nc367PFd4kxpw9IWvMVV6kNKWw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
