@@ -2,11 +2,11 @@
 <content>
   <numberOfPlayers>6</numberOfPlayers>
   <players>
-    <player playerID="0">Evka</player>
-    <player playerID="1">Mario</player>
-    <player playerID="2">Miska</player>
-    <player playerID="3">Baudewijn</player>
-    <player playerID="4">Tomas</player>
-    <player playerID="5">Mato</player>
+    <player playerID="0">Bob</player>
+    <player playerID="1">Tim</player>
+    <player playerID="2">Joe</player>
+    <player playerID="3">Eva</player>
+    <player playerID="4">Ian</player>
+    <player playerID="5">Leo</player>
   </players>
 </content>

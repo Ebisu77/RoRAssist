@@ -24,7 +24,7 @@ namespace RoRAssist.Pages
         #region Constructors
 
         /// <summary>
-        /// Constructor
+        /// Constructor for Main Page
         /// </summary>
         public MainPage()
         {

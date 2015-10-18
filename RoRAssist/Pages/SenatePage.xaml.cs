@@ -25,6 +25,7 @@ namespace RoRAssist.Pages
 
         #region Fields
 
+        //data support
         string[] playerNames = new string[6];
 
         #endregion
@@ -37,10 +38,17 @@ namespace RoRAssist.Pages
         public SenatePage()
         {
             InitializeComponent();
-            retrievePlayerNames();
+            retrievePlayerData();
             displayResults();
         }
 
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Display results in UI
+        /// </summary>
         private void displayResults()
         {
             labelPlayer_1.DataContext = playerNames[0];
@@ -51,11 +59,18 @@ namespace RoRAssist.Pages
             labelPlayer_6.DataContext = playerNames[5];
         }
 
-        private void retrievePlayerNames()
+        /// <summary>
+        /// retrieve names of players from xml
+        /// </summary>
+        private void retrievePlayerData()
         {
+            //create an instance of xml document
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");           
 
+            //TODO: retrieve number of players
+
+            //retrieve player names and save them into array
             for (int i = 0, playerCount = playerNames.Length; i < playerCount; i++)
             {
                 XmlElement element = xmlDoc.SelectSingleNode("//*[@playerID='" + i + "']") as XmlElement;

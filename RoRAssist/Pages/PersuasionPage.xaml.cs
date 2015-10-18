@@ -17,38 +17,28 @@ using Xceed.Wpf.Toolkit;
 namespace RoRAssist.Pages
 {
 
-    //TODO: general ideas:             
-    //- play with visibility of UI elemnts (e.g. bold fontweight)
-    //- do "graphic" of ui, eg.: lines or labels (attacking senator, defending senator)
-    //- calmp control values in UI (e.g. no negative numbers for personal treasury)
-
     /// <summary>
     /// Interaction logic for PersuasionPage.xaml
     /// </summary>
     public partial class PersuasionPage : Page
     {
+
         #region Fields
 
         //input variables from UI
-        bool senatorInFactionFlag;
-        bool eraEndCardDrawn;
-        int oratoryValue;
-        int influenceValue;
-        int bribeValue;
-        int counterBribeValue;
-        int loyaltyValue;
-        int personalTreasuryValue;
+        bool senatorInFactionFlag, eraEndCardDrawnFlag;
+        int oratoryValue, influenceValue, bribeValue, counterBribeValue, 
+            loyaltyValue, personalTreasuryValue;
 
         //output variables for display
-        int resultBaseNumber;
-        int resultDiceRoll;
+        int resultBaseNumber, resultDiceRoll;
 
         #endregion
 
         #region Constructors       
 
         /// <summary>
-        /// PersuasionPage constructor
+        /// Constructor for PersuasionPage
         /// </summary>
         public PersuasionPage()
         {
@@ -68,17 +58,12 @@ namespace RoRAssist.Pages
         {
             //get base number of persuation attemp
             resultBaseNumber = Service.Calculations.CalculatePersuasionBaseNumber(
-                oratoryValue,
-                influenceValue,
-                bribeValue,
-                loyaltyValue,
-                personalTreasuryValue,
-                counterBribeValue,
-                senatorInFactionFlag);
+                oratoryValue, influenceValue, bribeValue, loyaltyValue,
+                personalTreasuryValue, counterBribeValue, senatorInFactionFlag);
 
             //get final diceroll value
             resultDiceRoll = Service.Calculations.CalculatePersuasionDiceRoll(
-                resultBaseNumber, eraEndCardDrawn);
+                resultBaseNumber, eraEndCardDrawnFlag);
         }
 
         /// <summary>
@@ -86,12 +71,11 @@ namespace RoRAssist.Pages
         /// </summary>
         private void displayResults()
         {
-
             //display results for base number in view
             if (textBlockResultBaseNumber != null)
             {
                 textBlockResultBaseNumber.DataContext = "Base number is " + resultBaseNumber;
-            }
+            }                
 
             //display results for dice roll in view
             if (textBlockResultDiceRoll != null)
@@ -126,7 +110,7 @@ namespace RoRAssist.Pages
         {
             senatorInFactionFlag = (senatorAlignementCheckbox.IsChecked.Value) ?
                 true : false;
-            eraEndCardDrawn = (eraEndCheckbox.IsChecked.Value) ?
+            eraEndCardDrawnFlag = (eraEndCheckbox.IsChecked.Value) ?
                 true : false;
 
             //reflect changes in UI
@@ -141,32 +125,19 @@ namespace RoRAssist.Pages
         /// <param name="e"></param>
         private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-
             //reflect changes in UI            
             if (setOratory != null)
-            {
                 oratoryValue = (int)setOratory.Value;
-            }
             if (setInfluence != null)
-            {
                 influenceValue = (int)setInfluence.Value;
-            }
             if (setBribe != null)
-            {
                 bribeValue = (int)setBribe.Value;
-            }
             if (setLoyalty != null)
-            {
                 loyaltyValue = (int)setLoyalty.Value;
-            }
             if (setPersonalTreasury != null)
-            {
                 personalTreasuryValue = (int)setPersonalTreasury.Value;
-            }
             if (setCounterBribe != null)
-            {
                 counterBribeValue = (int)setCounterBribe.Value;
-            }
 
             // reflect changes in UI
             calculateResults();

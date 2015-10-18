@@ -15,29 +15,30 @@
                 <DockPanel Margin="10">
                     <Label Content="Number of players: " HorizontalAlignment="Center"/>
                     <xctk:IntegerUpDown x:Name="playersCountUpDownButton" HorizontalAlignment="Center"
-                          Value="3" Increment="1"/>
+                          Value="1" Increment="1" Minimum="1" Maximum="6"
+                          ValueChanged="playersCountUpDownButton_ValueChanged" />
                 </DockPanel>
-                <DockPanel>
+                <DockPanel Name="dockPanelPlayer_1" Visibility="Visible">
                     <Label Content="player 1"/>
                     <TextBox Name="textboxPlayer1"/>
                 </DockPanel>
-                <DockPanel>
+                <DockPanel Name="dockPanelPlayer_2" Visibility="Visible">
                     <Label Content="player 2"/>
                     <TextBox Name="textboxPlayer2"/>
                 </DockPanel>
-                <DockPanel>
+                <DockPanel Name="dockPanelPlayer_3" Visibility="Visible">
                     <Label Content="player 3"/>
                     <TextBox Name="textboxPlayer3"/>
                 </DockPanel>
-                <DockPanel>
+                <DockPanel Name="dockPanelPlayer_4" Visibility="Visible">
                     <Label Content="player 4"/>
                     <TextBox Name="textboxPlayer4"/>
                 </DockPanel>
-                <DockPanel>
+                <DockPanel Name="dockPanelPlayer_5" Visibility="Visible">
                     <Label Content="player 5"/>
                     <TextBox Name="textboxPlayer5"/>
                 </DockPanel>
-                <DockPanel>
+                <DockPanel Name="dockPanelPlayer_6" Visibility="Visible">
                     <Label Content="player 6"/>
                     <TextBox Name="textboxPlayer6"/>
                 </DockPanel>
