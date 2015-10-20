@@ -92,7 +92,6 @@ C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssis
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\PlayersInputPage.g.cs
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\Pages\PlayersInputPage.baml
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\bin\Debug\Xceed.Wpf.Toolkit.dll
-C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\RoRAssist_Content.g.cs
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\bin\Debug\Xceed.Wpf.AvalonDock.dll
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
 C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll

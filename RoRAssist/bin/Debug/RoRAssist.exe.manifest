@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoRAssist.exe" size="54192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoRAssist.exe" size="54704">
       <assemblyIdentity name="RoRAssist" version="0.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Jwll94KBajxqyI+gDTIUaoiFhmq48vQjzTX/xCic4v4=</dsig:DigestValue>
+        <dsig:DigestValue>qPSry6hk2S6YSmNvlLx55Ml78mqFLyK7iRtDS1f6k2s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -245,15 +245,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Lib\Xceed.Wpf.Toolkit.dll" size="1038336">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>069nuwFt6QDlBScYAhlIdDRf28UsH7WOqGXIv3ie2lI=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="RoRAssist.exe.config" size="189">
     <hash>
       <dsig:Transforms>
