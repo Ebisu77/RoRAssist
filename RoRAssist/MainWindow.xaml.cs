@@ -16,11 +16,16 @@ using System.Windows.Shapes;
 namespace RoRAssist
 {
     //TODO: general ideas:             
-    //- play with visibility of UI elemnts (e.g. bold fontweight)
+    //- play with visibility of UI elemnts (e.g. bold fontweight, tooltips, better grids, 
+    //center everything on window size change, maybe grid spliter where it is logical)
     //- do "graphic" of ui, eg.: lines or labels (styles)
     //- calmp control values in UI (e.g. no negative numbers for personal treasury)
     //- save data of indivirual pages to xml
-
+    //- go through labes and decide which of them will become textboxes (after styles are decided)
+    //- Add toolbar on default page? Settings, save, help, update...
+    //- Add options to main page (font size, colors...)
+    //- add todo and pictures to readme.md
+    //- play with grids in UI, so things stay in center of window
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace RoRAssist.Pages
 {
@@ -31,6 +33,27 @@ namespace RoRAssist.Pages
         public MainPage()
         {
             InitializeComponent();
+            displayVersionNumber();            
+        }
+
+        #endregion
+
+        #region Private methods
+
+        /// <summary>
+        /// Displays current version number
+        /// </summary>
+        private void displayVersionNumber()
+        {
+            
+            Assembly executingAssembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(executingAssembly.Location);
+            
+            string versionMajor = versionInfo.ProductMajorPart.ToString();
+            string versionMinor = versionInfo.ProductMinorPart.ToString();
+            string versionBuild = versionInfo.ProductBuildPart.ToString();
+
+            versionTextBlock.DataContext = "v. " + versionMajor + "." + versionMinor + "." + versionBuild;
         }
 
         #endregion

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoRAssist.exe" size="54704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoRAssist.exe" size="55728">
       <assemblyIdentity name="RoRAssist" version="0.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qPSry6hk2S6YSmNvlLx55Ml78mqFLyK7iRtDS1f6k2s=</dsig:DigestValue>
+        <dsig:DigestValue>t7P4/lmnRHLsDTQOLDhGOVgVh8tKlHviHCythQTEDbY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

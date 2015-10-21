@@ -19,6 +19,9 @@
                     Margin="20"
                     Click="quitButton_Click"/>
         </StackPanel>
+        <TextBlock Name="versionTextBlock" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                   Text="{Binding}"
+                   />
 
     </Grid>
 </Page>
