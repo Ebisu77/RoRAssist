@@ -95,7 +95,7 @@ namespace RoRAssist.Pages
             //display change in treasury
             if (treasuryChangeLabel != null)
             {
-                if (stateOfTreasuryChange > 1 || stateOfTreasuryChange == 0 || stateOfTreasuryChange < -1)
+                if ((stateOfTreasuryChange > 1) || (stateOfTreasuryChange == 0) || (stateOfTreasuryChange < -1))
                 {
                     treasuryChangeLabel.DataContext = "This year change is " + stateOfTreasuryChange + " talents";
                 }
@@ -108,7 +108,7 @@ namespace RoRAssist.Pages
             //display final state of treasury
             if (treasuryResultLabel != null)
             {
-                if (stateOfTreasuryTotal > 1 || stateOfTreasuryTotal == 0 || stateOfTreasuryTotal < -1)
+                if ((stateOfTreasuryTotal > 1) || (stateOfTreasuryTotal == 0) || (stateOfTreasuryTotal < -1))
                 {
                     treasuryResultLabel.DataContext = "Republic of Rome has " + stateOfTreasuryTotal + " talents";
                 }
