@@ -54,7 +54,7 @@ namespace RoRAssist.Service
         {
             return africa + asia + bithynia + cilicia + crete + gaulCisalpine +
                 gaulNarbonese + gaulTransalpine + grece + illyricum + sardinia +
-                sicily + spainFurther + spainNearer + syria;            
+                sicily + spainFurther + spainNearer + syria;
         }
 
         /// <summary>
@@ -65,10 +65,10 @@ namespace RoRAssist.Service
         /// <param name="fleets">number of active fleets</param>
         /// <returns></returns>
         public static int CalculateTreasuryBasicExpenses(int wars, int legions, int fleets)
-        {            
-            return (wars * Service.Constants.TREASURY_COST_WAR) + 
-                (legions * Service.Constants.TREASURY_COST_LEGION) + 
-                (fleets * Service.Constants.TREASURY_COST_FLEET);            
+        {
+            return (wars * Service.Constants.TREASURY_COST_WAR) +
+                (legions * Service.Constants.TREASURY_COST_LEGION) +
+                (fleets * Service.Constants.TREASURY_COST_FLEET);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace RoRAssist.Service
         /// <param name="landbill_3b">land bill cost</param>
         /// <param name="landbill_3c">land bill cost</param>
         /// <returns>total expenses of all land bills</returns>
-        public static int ClaculateTreasuryLandBills(bool landbill_1a, bool landbill_2a, 
+        public static int ClaculateTreasuryLandBills(bool landbill_1a, bool landbill_2a,
             bool landbill_2b, bool landbill_3a, bool landbill_3b, bool landbill_3c)
         {
             //determines if land bill is active and sets respective value            
@@ -112,7 +112,7 @@ namespace RoRAssist.Service
         /// <returns>final state of treasury</returns>
         public static int CalculateTreasuryTotal(int basicIncome, int provinces, int basicExpenses, int landbills)
         {
-            return basicIncome + provinces - basicExpenses - landbills;            
+            return basicIncome + provinces - basicExpenses - landbills;
         }
 
         /// <summary>
@@ -141,22 +141,22 @@ namespace RoRAssist.Service
         /// <param name="deffendingSenatorCounterBribe">counter bribe of defending senator</param>
         /// <param name="senatorAlignementStatus">status determining if defending senator is member of a faction</param>
         /// <returns>result base number</returns>
-        public static int CalculatePersuasionBaseNumber(int attackingSenatorOratory, int attackingSenatorInfluence, 
-                int attackingSenatorBribe, int deffendingSenatorLoyalty, int deffendingSenatorPersonalTreasury, 
+        public static int CalculatePersuasionBaseNumber(int attackingSenatorOratory, int attackingSenatorInfluence,
+                int attackingSenatorBribe, int deffendingSenatorLoyalty, int deffendingSenatorPersonalTreasury,
                 int deffendingSenatorCounterBribe, bool senatorAlignementStatus)
-                {
-                    //calculation support
-                    int senatorAlignementValue;                    
+        {
+            //calculation support
+            int senatorAlignementValue;
 
-                    //determining value for defending senator based on his faction alignement            
-                    senatorAlignementValue = (senatorAlignementStatus) ?
-                        Service.Constants.DEFENDING_SENATOR_IN_FACTION : Service.Constants.DEFENDING_SENATOR_NEUTRAL;
+            //determining value for defending senator based on his faction alignement            
+            senatorAlignementValue = (senatorAlignementStatus) ?
+                Service.Constants.DEFENDING_SENATOR_IN_FACTION : Service.Constants.DEFENDING_SENATOR_NEUTRAL;
 
-                    //calculating result number and returning value
-                    return (attackingSenatorOratory + attackingSenatorInfluence 
-                        + attackingSenatorBribe) - (deffendingSenatorLoyalty + deffendingSenatorPersonalTreasury 
-                        + deffendingSenatorCounterBribe + senatorAlignementValue);
-                }
+            //calculating result number and returning value
+            return (attackingSenatorOratory + attackingSenatorInfluence
+                + attackingSenatorBribe) - (deffendingSenatorLoyalty + deffendingSenatorPersonalTreasury
+                + deffendingSenatorCounterBribe + senatorAlignementValue);
+        }
 
         /// <summary>
         /// Calculates final dice roll needed for persuasion attemp
@@ -190,8 +190,8 @@ namespace RoRAssist.Service
                     return Service.Constants.ERA_END_ACTIVE;
                 }
             }
-        }            
-            
+        }
+
         #endregion
 
     }

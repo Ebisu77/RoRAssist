@@ -78,7 +78,7 @@ namespace RoRAssist.Pages
         private void displayResults()
         {
             //set visibility of stackpanels
-            if (stackPlayer1 != null)            
+            if (stackPlayer1 != null)
             {
                 stackPlayer1.Visibility = (playersCount > 0) ?
                 Visibility.Visible : Visibility.Hidden;
@@ -107,7 +107,7 @@ namespace RoRAssist.Pages
             {
                 stackPlayer6.Visibility = (playersCount > 5) ?
                 Visibility.Visible : Visibility.Hidden;
-            }            
+            }
 
             //show proper player names in labels
             if (labelPlayer_1 != null)

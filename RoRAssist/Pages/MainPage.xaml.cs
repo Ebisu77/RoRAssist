@@ -33,7 +33,7 @@ namespace RoRAssist.Pages
         public MainPage()
         {
             InitializeComponent();
-            displayVersionNumber();            
+            displayVersionNumber();
         }
 
         #endregion
@@ -45,10 +45,10 @@ namespace RoRAssist.Pages
         /// </summary>
         private void displayVersionNumber()
         {
-            
+
             Assembly executingAssembly = Assembly.GetExecutingAssembly();
             FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(executingAssembly.Location);
-            
+
             string versionMajor = versionInfo.ProductMajorPart.ToString();
             string versionMinor = versionInfo.ProductMinorPart.ToString();
             string versionBuild = versionInfo.ProductBuildPart.ToString();
