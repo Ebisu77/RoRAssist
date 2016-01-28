@@ -7,4 +7,4 @@
 - .NET Framework 4.6 
  
 # About developer  
-- I am learning programmer and board-games enthusiast, and this is my first stand-alone project. Please feel free to contact me on github (@Ebisu77) when you notice any bugs, errors or if you have ideas for this application. 
+- I am a board-games and programming enthusiast. I am new to C# programming and this is my first stand-alone project. Please feel free to contact me on github (@Ebisu77) if you notice any bugs, errors or if you have any ideas for improvement. 
