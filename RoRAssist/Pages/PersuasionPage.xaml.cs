@@ -27,7 +27,7 @@ namespace RoRAssist.Pages
 
         //input variables from UI
         bool senatorInFactionFlag, eraEndCardDrawnFlag;
-        int oratoryValue, influenceValue, bribeValue, counterBribeValue, 
+        int oratoryValue, influenceValue, bribeValue, counterBribeValue,
             loyaltyValue, personalTreasuryValue;
 
         //output variables for display
@@ -75,7 +75,7 @@ namespace RoRAssist.Pages
             if (textBlockResultBaseNumber != null)
             {
                 textBlockResultBaseNumber.DataContext = "Base number is " + resultBaseNumber;
-            }                
+            }
 
             //display results for dice roll in view
             if (textBlockResultDiceRoll != null)

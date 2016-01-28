@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/players.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/xceed.wpf.toolkit.dll")]
 
 

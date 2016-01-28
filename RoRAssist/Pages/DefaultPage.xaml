@@ -8,20 +8,20 @@
       d:DesignHeight="768" d:DesignWidth="1024"
       Title="DefaultPage">
 
-    
-        <Grid Margin="10,10,0,0" VerticalAlignment="Top">
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" >
             <Button x:Name="turnOrderButton" Content ="Turn Order" Width="Auto"/>
             <Button x:Name="stateTreasuryButton" Content="State Treasury" Width="Auto" Click="stateTreasuryButton_Click"/>
             <Button x:Name="persuadeButton" Content="Persuasion" Width="Auto" Click="persuadeButton_Click"  />
             <Button x:Name="senateButton" Content="Senate" Width="Auto" Click="senateButton_Click" />
             <Button x:Name="combatButton" Content="Combat" Width="Auto"/>
         </StackPanel>
-        <Frame Name="FrameGameplayContent" Grid.Row="1" />
+        <Frame Name="FrameGameplayContent" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
     </Grid>
 </Page>

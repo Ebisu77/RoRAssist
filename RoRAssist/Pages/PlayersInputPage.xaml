@@ -10,44 +10,42 @@
       Title="PlayersInputPage">
 
     <Grid Name="mainGrid">
-        <Border Padding="20">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <DockPanel Margin="10">
-                    <Label Content="Number of players: " HorizontalAlignment="Center"/>
-                    <xctk:IntegerUpDown x:Name="playersCountUpDownButton" HorizontalAlignment="Center"
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <DockPanel Margin="10">
+                <Label Content="Number of players: " HorizontalAlignment="Center"/>
+                <xctk:IntegerUpDown x:Name="playersCountUpDownButton" HorizontalAlignment="Center"
                           Value="1" Increment="1" Minimum="1" Maximum="6"
                           ValueChanged="playersCountUpDownButton_ValueChanged" />
-                </DockPanel>
-                <DockPanel Name="dockPanelPlayer_1" Visibility="Visible">
-                    <Label Content="player 1"/>
-                    <TextBox Name="textboxPlayer1"/>
-                </DockPanel>
-                <DockPanel Name="dockPanelPlayer_2" Visibility="Visible">
-                    <Label Content="player 2"/>
-                    <TextBox Name="textboxPlayer2"/>
-                </DockPanel>
-                <DockPanel Name="dockPanelPlayer_3" Visibility="Visible">
-                    <Label Content="player 3"/>
-                    <TextBox Name="textboxPlayer3"/>
-                </DockPanel>
-                <DockPanel Name="dockPanelPlayer_4" Visibility="Visible">
-                    <Label Content="player 4"/>
-                    <TextBox Name="textboxPlayer4"/>
-                </DockPanel>
-                <DockPanel Name="dockPanelPlayer_5" Visibility="Visible">
-                    <Label Content="player 5"/>
-                    <TextBox Name="textboxPlayer5"/>
-                </DockPanel>
-                <DockPanel Name="dockPanelPlayer_6" Visibility="Visible">
-                    <Label Content="player 6"/>
-                    <TextBox Name="textboxPlayer6"/>
-                </DockPanel>
-                
-                <DockPanel>
-                    <Button Name="cancelButton" Content="Back" Margin="10" Width="100" Click="cancelButton_Click" />
-                    <Button Name="doneButton" Content="Done" Margin="10" Width="100" Click="doneButton_Click"/>
-                </DockPanel>            
-             </StackPanel>
-        </Border>
+            </DockPanel>
+            <DockPanel Name="dockPanelPlayer_1" Visibility="Visible" Margin="5">
+                <Label Content="player 1"/>
+                <TextBox Name="textboxPlayer1"/>
+            </DockPanel>
+            <DockPanel  Name="dockPanelPlayer_2" Visibility="Visible" Margin="5">
+                <Label Content="player 2"/>
+                <TextBox Name="textboxPlayer2"/>
+            </DockPanel>
+            <DockPanel Name="dockPanelPlayer_3" Visibility="Visible" Margin="5">
+                <Label Content="player 3"/>
+                <TextBox Name="textboxPlayer3"/>
+            </DockPanel>
+            <DockPanel Name="dockPanelPlayer_4" Visibility="Visible" Margin="5">
+                <Label Content="player 4"/>
+                <TextBox Name="textboxPlayer4"/>
+            </DockPanel>
+            <DockPanel Name="dockPanelPlayer_5" Visibility="Visible" Margin="5">
+                <Label Content="player 5"/>
+                <TextBox Name="textboxPlayer5"/>
+            </DockPanel>
+            <DockPanel Name="dockPanelPlayer_6" Visibility="Visible" Margin="5">
+                <Label Content="player 6"/>
+                <TextBox Name="textboxPlayer6"/>
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="cancelButton" Content="Back" Margin="10" Width="100" Click="cancelButton_Click" />
+                <Button Name="doneButton" Content="Done" Margin="10" Width="100" Click="doneButton_Click"/>
+            </DockPanel>
+        </StackPanel>
     </Grid>
 </Page>

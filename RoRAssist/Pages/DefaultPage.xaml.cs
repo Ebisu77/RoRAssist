@@ -29,7 +29,7 @@ namespace RoRAssist.Pages
         /// </summary>
         public DefaultPage()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         #endregion

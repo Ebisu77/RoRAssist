@@ -12,88 +12,71 @@
 
     <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20" />
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="childGridInput" Grid.Row="1" Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>                
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
-                <TextBlock Text="Income" 
-                           HorizontalAlignment="Center" />
-                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Label Content="State of Treasury: "/>
-                    <xctk:IntegerUpDown x:Name="incomeStateOfTreasuryBeginning" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
-                           Increment="1" Value="0" ValueChanged="OnValueChanged"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Label Content="Annual revenue: " HorizontalAlignment="Right"/>
-                    <xctk:IntegerUpDown x:Name="incomeAnnualRevenue" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
-                           Increment="1" Value="100" ValueChanged="OnValueChanged"/>
-                </StackPanel>
-                
-                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Label Content="Contributions: "/>
-                    <xctk:IntegerUpDown x:Name="incomeContributions" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
-                           Increment="1" Value="0" ValueChanged="OnValueChanged"/>
-                </StackPanel>
-            </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="1" 
-                        HorizontalAlignment="Center">
-                <TextBlock Text="Expenses" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Label Content="Active Wars: "/>
-                    <xctk:IntegerUpDown x:Name="expenseActiveWars" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Width="Auto">
+            <TextBlock Text="Income" Height="40"
+                       HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <DockPanel HorizontalAlignment="Stretch" LastChildFill="False">
+                <Label Content="State of Treasury: " DockPanel.Dock="Left"/>
+                <xctk:IntegerUpDown x:Name="incomeStateOfTreasuryBeginning" DockPanel.Dock="Right" 
                            Increment="1" Value="0" ValueChanged="OnValueChanged"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Label Content="Legions: "/>
-                    <xctk:IntegerUpDown x:Name="expenseLegions" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Stretch" LastChildFill="False">
+                <Label Content="Annual revenue: " DockPanel.Dock="Left"/>
+                <xctk:IntegerUpDown x:Name="incomeAnnualRevenue" DockPanel.Dock="Right"
+                           Increment="1" Value="100" ValueChanged="OnValueChanged"/>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Stretch" LastChildFill="False">
+                <Label Content="Contributions: " DockPanel.Dock="Left"/>
+                <xctk:IntegerUpDown x:Name="incomeContributions" DockPanel.Dock="Right"
                            Increment="1" Value="0" ValueChanged="OnValueChanged"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Label Content="Fleets: "/>
-                    <xctk:IntegerUpDown x:Name="expenseFleets" 
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
+            </DockPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" Width="Auto">
+            <TextBlock Text="Expenses" Height="40"
+                       HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <DockPanel HorizontalAlignment="Stretch" LastChildFill="False">
+                <Label Content="Active Wars: " DockPanel.Dock="Left"/>
+                <xctk:IntegerUpDown x:Name="expenseActiveWars" 
+                           HorizontalAlignment="Center" DockPanel.Dock="Right"
                            Increment="1" Value="0" ValueChanged="OnValueChanged"/>
-                </StackPanel>
-            </StackPanel>            
-        </Grid>
-        <Grid Name="labelsForInputGrid" Grid.Row="2">
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Stretch" LastChildFill="False">
+                <Label Content="Legions: " DockPanel.Dock="Left"/>
+                <xctk:IntegerUpDown x:Name="expenseLegions" 
+                           HorizontalAlignment="Center" DockPanel.Dock="Right"
+                           Increment="1" Value="0" ValueChanged="OnValueChanged"/>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Stretch" LastChildFill="False">
+                <Label Content="Fleets: " DockPanel.Dock="Left"/>
+                <xctk:IntegerUpDown x:Name="expenseFleets" 
+                           HorizontalAlignment="Center" DockPanel.Dock="Right"
+                           Increment="1" Value="0" ValueChanged="OnValueChanged"/>
+            </DockPanel>
+        </StackPanel>
+
+        <Grid Name="childGridProvinces" Grid.Column="1" Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Income From Provinces" 
-                       HorizontalAlignment="Center" Grid.Column="0"/>
-            <TextBlock Text="Land Bills" 
-                       HorizontalAlignment="Center" Grid.Column="1"/>
-        </Grid>
-        <Grid Name="provincesAndLandBillsGrid" Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>                
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+            <StackPanel Grid.Column="0" HorizontalAlignment="Right" Margin="20">
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <Label Content="Africa: "/>
                     <xctk:IntegerUpDown x:Name="incomeProvinceAfrica" 
@@ -144,8 +127,8 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-                
+            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="20">
+
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <Label Content="Greece: "/>
                     <xctk:IntegerUpDown x:Name="incomeProvinceGreece" 
@@ -189,19 +172,29 @@
                            Increment="1" Value="0" ValueChanged="OnValueChanged"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Column="2" Grid.ColumnSpan="3"
-                        HorizontalAlignment="Center">                
-                    <CheckBox x:Name="checkboxLandbill_1" Content="I " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>
-                    <CheckBox x:Name="checkboxLandbill_2a" Content="II " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>
-                    <CheckBox x:Name="checkboxLandbill_2b" Content="II " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                
-                    <CheckBox x:Name="checkboxLandbill_3a" Content="III " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                
-                    <CheckBox x:Name="checkboxLandbill_3b" Content="III " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                
-                    <CheckBox x:Name="checkboxLandbill_3c" Content="III " FlowDirection="RightToLeft" Click="OnCheckboxChanged"/>                                
-            </StackPanel>
         </Grid>
-        <StackPanel Grid.Row="4" >
-            <Label x:Name="treasuryChangeLabel" Content="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label x:Name="treasuryResultLabel" Content="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        </StackPanel>        
+
+        <StackPanel Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center">
+            <TextBlock Text="Land Bills" Margin="20" HorizontalAlignment="Right"/>
+            <CheckBox x:Name="checkboxLandbill_1" Content=" I " FlowDirection="RightToLeft" 
+                      HorizontalAlignment="Right" Click="OnCheckboxChanged"/>
+            <CheckBox x:Name="checkboxLandbill_2a" Content=" II " FlowDirection="RightToLeft" 
+                      HorizontalAlignment="Right" Click="OnCheckboxChanged"/>
+            <CheckBox x:Name="checkboxLandbill_2b" Content=" II " FlowDirection="RightToLeft" 
+                      HorizontalAlignment="Right" Click="OnCheckboxChanged"/>
+            <CheckBox x:Name="checkboxLandbill_3a" Content="III " FlowDirection="RightToLeft" 
+                      HorizontalAlignment="Right" Click="OnCheckboxChanged"/>
+            <CheckBox x:Name="checkboxLandbill_3b" Content="III " FlowDirection="RightToLeft" 
+                      HorizontalAlignment="Right" Click="OnCheckboxChanged"/>
+            <CheckBox x:Name="checkboxLandbill_3c" Content="III " FlowDirection="RightToLeft" 
+                      HorizontalAlignment="Right" Click="OnCheckboxChanged"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3">
+            <Label x:Name="treasuryChangeLabel" Content="{Binding}" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label x:Name="treasuryResultLabel" Content="{Binding}" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>
     </Grid>
 </Page>

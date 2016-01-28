@@ -8,8 +8,14 @@
       d:DesignHeight="768" d:DesignWidth="1024"
       Title="MainPage">
 
-    <Grid Name="mainGrid">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+    <Grid Name="mainGrid" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
             <Button x:Name="continueButton"  Content="Continue Session" 
                     Margin="20" Click="continueButton_Click"                    />
             <Button x:Name="startButton"  Content="New Session" 
@@ -19,6 +25,9 @@
                     Margin="20"
                     Click="quitButton_Click"/>
         </StackPanel>
+        <TextBlock Name="versionTextBlock" Grid.Row="2"
+                   HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                   Text="{Binding}"/>
 
     </Grid>
 </Page>

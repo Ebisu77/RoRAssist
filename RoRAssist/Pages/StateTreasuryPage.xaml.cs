@@ -16,7 +16,8 @@ using Xceed.Wpf.Toolkit;
 
 namespace RoRAssist.Pages
 {
-    //TODO: - use last year result as a new starting year treasury.     
+    //TODO: - use last year result as a new starting year treasury.
+    //TODO: - exception handling, if user hits delete inside integerUpDown box => invalid operation exception
 
     /// <summary>
     /// Interaction logic for StateTreasuryPage.xaml
@@ -25,7 +26,7 @@ namespace RoRAssist.Pages
     {
 
         #region Fields
-        
+
         //general income
         int startingStateOfTreasury, annualRevenue, contributions;
 
@@ -36,7 +37,7 @@ namespace RoRAssist.Pages
         int stateOfTreasuryTotal, stateOfTreasuryChange;
 
         //provinces
-        int africa, asia, bithynia, cilicia, crete, gaulCisalpine, gaulNarbonese, gaulTransalpine, 
+        int africa, asia, bithynia, cilicia, crete, gaulCisalpine, gaulNarbonese, gaulTransalpine,
             grece, illyricum, sardinia, sicily, spainFurther, spainNearer, syria;
 
         //landbills
@@ -66,13 +67,13 @@ namespace RoRAssist.Pages
         private void calculateResults()
         {
             //calculates different incomes and expenses
-            int generalIncome = Service.Calculations.CalculateTreasuryBasicIncome(startingStateOfTreasury, 
+            int generalIncome = Service.Calculations.CalculateTreasuryBasicIncome(startingStateOfTreasury,
                 annualRevenue, contributions);
             int provincesIncome = Service.Calculations.CalculateTreasuryProvinces(africa, asia, bithynia,
                 cilicia, crete, gaulCisalpine, gaulNarbonese, gaulTransalpine, grece, illyricum,
                 sardinia, sicily, spainFurther, spainNearer, syria);
             int generalExpenses = Service.Calculations.CalculateTreasuryBasicExpenses(activeWars,
-                legions, fleets);                        
+                legions, fleets);
             int landbillsExpense = Service.Calculations.ClaculateTreasuryLandBills
                 (landbill1, landbill2a, landbill2b, landbill3a, landbill3b, landbill3c);
 
@@ -95,7 +96,7 @@ namespace RoRAssist.Pages
             //display change in treasury
             if (treasuryChangeLabel != null)
             {
-                if (stateOfTreasuryChange > 1 || stateOfTreasuryChange == 0 || stateOfTreasuryChange < -1)
+                if ((stateOfTreasuryChange > 1) || (stateOfTreasuryChange == 0) || (stateOfTreasuryChange < -1))
                 {
                     treasuryChangeLabel.DataContext = "This year change is " + stateOfTreasuryChange + " talents";
                 }
@@ -108,15 +109,15 @@ namespace RoRAssist.Pages
             //display final state of treasury
             if (treasuryResultLabel != null)
             {
-                if (stateOfTreasuryTotal > 1 || stateOfTreasuryTotal == 0 || stateOfTreasuryTotal < -1)
+                if ((stateOfTreasuryTotal > 1) || (stateOfTreasuryTotal == 0) || (stateOfTreasuryTotal < -1))
                 {
                     treasuryResultLabel.DataContext = "Republic of Rome has " + stateOfTreasuryTotal + " talents";
                 }
                 else
                 {
                     treasuryResultLabel.DataContext = "Republic of Rome has " + stateOfTreasuryTotal + " talent";
-                }                 
-            }       
+                }
+            }
         }
 
         #endregion
@@ -132,11 +133,11 @@ namespace RoRAssist.Pages
         {
             //changes in general income area
             if (incomeStateOfTreasuryBeginning != null)
-                startingStateOfTreasury = (int)incomeStateOfTreasuryBeginning.Value;            
-            if (incomeAnnualRevenue != null)            
-                annualRevenue = (int)incomeAnnualRevenue.Value;            
+                startingStateOfTreasury = (int)incomeStateOfTreasuryBeginning.Value;
+            if (incomeAnnualRevenue != null)
+                annualRevenue = (int)incomeAnnualRevenue.Value;
             if (incomeContributions != null)
-                contributions= (int)incomeContributions.Value;
+                contributions = (int)incomeContributions.Value;
 
             //changes in general expenses area
             if (expenseActiveWars != null)
@@ -182,7 +183,7 @@ namespace RoRAssist.Pages
             calculateResults();
             displayResults();
         }
-                
+
         /// <summary>
         /// Handle checkbox changes in UI
         /// </summary>

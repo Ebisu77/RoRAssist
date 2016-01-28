@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoRAssist"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024">
-    <Grid>
-        <Frame x:Name="MainFrame" Content="Frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1024"/>
-
+        Title="RoRAssist" WindowStartupLocation="CenterScreen" 
+        Height="768" Width="1024" >
+    
+    <Grid Name="mainWindowGrid">
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" 
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>
