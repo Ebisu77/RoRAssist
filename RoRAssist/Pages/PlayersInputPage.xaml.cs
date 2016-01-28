@@ -54,7 +54,7 @@ namespace RoRAssist.Pages
         {
             //create an instance of XML document 
             XmlDocument doc = new XmlDocument();
-            doc.Load(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");
+            doc.Load(Service.Constants.pathToPlayersData);
 
             //save number of players into XML
             XmlNode xmlPlayersCount = doc.SelectSingleNode("/content/numberOfPlayers");
@@ -85,7 +85,7 @@ namespace RoRAssist.Pages
             }
 
             //save results
-            doc.Save(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");
+            doc.Save(Service.Constants.pathToPlayersData);
         }
 
         /// <summary>

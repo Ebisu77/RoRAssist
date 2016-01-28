@@ -11,9 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Xceed.Wpf.Toolkit;
 using System.Xml;
+using System.IO;
 
 namespace RoRAssist.Pages
 {
@@ -33,7 +33,7 @@ namespace RoRAssist.Pages
         int[] playersOratory = new int[6];
         int[] playersKnights = new int[6];
         int[] playersTalents = new int[6];
-
+        
         #endregion
 
         #region Constructors
@@ -57,14 +57,14 @@ namespace RoRAssist.Pages
         /// </summary>
         private void retrievePlayerData()
         {
-            //create an instance of xml document
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"C:\Users\Anakin\OneDrive\Programming\Repo\RoRAssist\RoRAssist\Data\Players.xml");
+            // create an instance of xml document
+            var xmlDoc = new XmlDocument();
+            xmlDoc.Load(Service.Constants.pathToPlayersData);
 
-            //retrieve number of players
+            // retrieve number of players
             playersCount = Convert.ToInt32(xmlDoc.SelectSingleNode("//numberOfPlayers").InnerText);
 
-            //retrieve player names and save them into array
+            // retrieve player names and save them into array
             for (int i = 0; i < playersCount; i++)
             {
                 XmlElement element = xmlDoc.SelectSingleNode("//*[@playerID='" + i + "']") as XmlElement;
@@ -77,7 +77,7 @@ namespace RoRAssist.Pages
         /// </summary>
         private void displayResults()
         {
-            //set visibility of stackpanels
+            // set visibility of stackpanels
             if (stackPlayer1 != null)
             {
                 stackPlayer1.Visibility = (playersCount > 0) ?
@@ -109,7 +109,7 @@ namespace RoRAssist.Pages
                 Visibility.Visible : Visibility.Hidden;
             }
 
-            //show proper player names in labels
+            // show proper player names in labels
             if (labelPlayer_1 != null)
                 labelPlayer_1.DataContext = playerNames[0];
             if (labelPlayer_2 != null)
@@ -130,7 +130,7 @@ namespace RoRAssist.Pages
 
         private void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            //save players oratory into array
+            // save players oratory into array
             if (oratoryUpDown_player1 != null)
                 playersOratory[0] = (int)oratoryUpDown_player1.Value;
             if (oratoryUpDown_player2 != null)
@@ -144,7 +144,7 @@ namespace RoRAssist.Pages
             if (oratoryUpDown_player6 != null)
                 playersOratory[5] = (int)oratoryUpDown_player6.Value;
 
-            //save number of player knighs into array
+            // save number of player knighs into array
             if (knightsUpDown_player1 != null)
                 playersKnights[0] = (int)knightsUpDown_player1.Value;
             if (knightsUpDown_player2 != null)
@@ -158,7 +158,7 @@ namespace RoRAssist.Pages
             if (knightsUpDown_player6 != null)
                 playersKnights[5] = (int)knightsUpDown_player6.Value;
 
-            //save players talents into array
+            // save players talents into array
             if (talentsUpDown_player1 != null)
                 playersTalents[0] = (int)talentsUpDown_player1.Value;
             if (talentsUpDown_player2 != null)

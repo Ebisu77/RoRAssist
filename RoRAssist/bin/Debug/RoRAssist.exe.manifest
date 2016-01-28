@@ -49,199 +49,199 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GOLsiWCLggI9+hFOMWiq2g+x/Ryo/+h7VxIdjW9IHWg=</dsig:DigestValue>
+        <dsig:DigestValue>BxLeaM9B5cwIkFtvTxdXfISvSLn6Ll4rVOVaH9u3iYM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.AvalonDock.dll" size="429568">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.AvalonDock.dll" size="412672">
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8bKW4J9jGI1rdDmzMQPcBSeWhKLTYRdUXAOCmGWaoYs=</dsig:DigestValue>
+        <dsig:DigestValue>HWtp6zOJMj1AZlPUkh5dXr365nSSr1IiFlnQ9tkeeAA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="de" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="de" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ckh+GF/SDEmBqNx3Gn6hU8hYPlHL5Y0WuQ9SuG7jk7Q=</dsig:DigestValue>
+        <dsig:DigestValue>whA8ImALbAOCmG6Fgx6XvO7zjptwiyaS7r+4JKAOnco=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="es" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="es" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AECfBgVgMgioxZLDN0Ja9ftJFH9kSVboN2z/aLoh7Ic=</dsig:DigestValue>
+        <dsig:DigestValue>x+k/XjqBVb9XGQBZxgj4lZLQK3UlevQ1OfNW3kxh8xw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="fr" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="fr" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>d9VeOB918FkZJ6aRmXlGbnyijN6o8Zr4K5m19cvC41s=</dsig:DigestValue>
+        <dsig:DigestValue>ccTGhYr45F0MNc6xo3gQ1OFDg0hVatmUsTi//QSryxE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hu\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="hu" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="hu" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5IIRVeuuiRAUz6ZmzEmBaUDKZp/rwsBY3SLa4GtsaO8=</dsig:DigestValue>
+        <dsig:DigestValue>jC0ZSQicdLEtd8vf85sEPs9jnI5tnwQmNcqmvywbJJQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="it" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="it" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NhflxFeFopU3ji0Bgd/W835KUrG4SZers2m9WSj4s1U=</dsig:DigestValue>
+        <dsig:DigestValue>aSTcLx1kUgPRATGlr31WXWQ6WReYBlqcDdXANXM+7js=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="pt-BR" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="pt-BR" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4gJs0xDdcVHY3+Lg879+EKk7a/Q63AG27FAxncNxXV4=</dsig:DigestValue>
+        <dsig:DigestValue>tFXdfeXEtsV48npVFzbou5JD1Wd24K9s3nDtDaVfon0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="ro" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="ro" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hfO3Duu1Mp1mbm/Sn6GcQTUsiXup1ziP04Ai3rCM45w=</dsig:DigestValue>
+        <dsig:DigestValue>Ga255aPYEjQfDdiQutvQbj5s9/oJZ6N5KPvAGrLiMFw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="ru" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="ru" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Qp0ygQ1bf/y44puD7K36jIFstcZOFABvU8QoPoPoR/U=</dsig:DigestValue>
+        <dsig:DigestValue>YaGedC51e4i+S8fIEpGrjut67WMNqzAT1O7T01URF5o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\Xceed.Wpf.AvalonDock.resources.dll" size="5632">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="sv" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="sv" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zap6MSa6is+30dcqmnIHQ7MQZt/RN4ATkwiha2rgVFM=</dsig:DigestValue>
+        <dsig:DigestValue>Q1s/pwzmDMC5qmDB0MJdF92Lv6/WpbBn2Tav8BgS9hQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\Xceed.Wpf.AvalonDock.resources.dll" size="5632">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="zh-Hans" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.resources" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="zh-Hans" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PXxX3zHkBl7u+fqrUCepMQqRNKWNwuNcqfOWrjeNZBE=</dsig:DigestValue>
+        <dsig:DigestValue>zuuD1+ELke9Vgu5LzU3sufMW4XwlNKxin3udeg7lZyg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.AvalonDock.Themes.Aero.dll" size="86016">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.Themes.Aero" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.Themes.Aero" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EEy2vcRBHcYs5db5z9u2v9tftsR+MuB5hqeqj5SmpKA=</dsig:DigestValue>
+        <dsig:DigestValue>HWPxWwqQzIdm4fexIFbPRH8xkCejvNdN3nmMarC+y2c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.AvalonDock.Themes.Metro.dll" size="78848">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.Themes.Metro" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.AvalonDock.Themes.Metro.dll" size="78336">
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.Themes.Metro" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>73wF/Ad7WvPWU0UQFfKmg59HJrWs1iMk11SGGFXbscM=</dsig:DigestValue>
+        <dsig:DigestValue>arFPqWfu4FOnAzflts7zdGF0JcRk0DmSoKkwF6Yzync=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" size="83456">
-      <assemblyIdentity name="Xceed.Wpf.AvalonDock.Themes.VS2010" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Xceed.Wpf.AvalonDock.Themes.VS2010" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4qR6pGGrU/M8Yjj8BHwYcIQKTgSdkO04hVHixdU2lFg=</dsig:DigestValue>
+        <dsig:DigestValue>7WchRm3t57UuB6TaBiUENMgeQw0qvcl1M9Rz3FtpOYY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.DataGrid.dll" size="2266112">
-      <assemblyIdentity name="Xceed.Wpf.DataGrid" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.DataGrid.dll" size="2220032">
+      <assemblyIdentity name="Xceed.Wpf.DataGrid" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cPB8x+lbvDzGzNDR+IuQfnhemxwdbaHiI7jU7ovlYDo=</dsig:DigestValue>
+        <dsig:DigestValue>Ny1tPc/H10KZp1uJTWrG49Zje9IKJdlwDbz9teOqGcE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.Toolkit.dll" size="1038336">
-      <assemblyIdentity name="Xceed.Wpf.Toolkit" version="2.5.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.Toolkit.dll" size="1023488">
+      <assemblyIdentity name="Xceed.Wpf.Toolkit" version="2.6.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>069nuwFt6QDlBScYAhlIdDRf28UsH7WOqGXIv3ie2lI=</dsig:DigestValue>
+        <dsig:DigestValue>vQS6ybhHXE2hp3oGqQaH+/ROFWCjT9/lnk3g5UmfnmI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
