@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RoRAssist
+namespace RoRAssistWinApp
 {
     //TODO: general ideas:             
     //- play with visibility of UI elemnts (e.g. bold fontweight, tooltips, better grids, 

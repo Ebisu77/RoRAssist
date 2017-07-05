@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RoRAssist.Service
+namespace RoRAssistWinApp.Service
 {
     /// <summary>
     /// Provides all contstants 

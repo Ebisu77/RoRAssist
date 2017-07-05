@@ -15,7 +15,7 @@ using Xceed.Wpf.Toolkit;
 using System.Xml;
 using System.IO;
 
-namespace RoRAssist.Pages
+namespace RoRAssistWinApp.Pages
 {
     /// <summary>
     /// Interaction logic for SenatePage.xaml

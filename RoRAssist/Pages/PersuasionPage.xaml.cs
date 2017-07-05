@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Xceed.Wpf.Toolkit;
 
-namespace RoRAssist.Pages
+namespace RoRAssistWinApp.Pages
 {
 
     /// <summary>

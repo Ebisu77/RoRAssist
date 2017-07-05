@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using Xceed.Wpf.Toolkit;
 using System.Xml;
 
-namespace RoRAssist.Pages
+namespace RoRAssistWinApp.Pages
 {
     /// <summary>
     /// Interaction logic for PlayersInputPage.xaml

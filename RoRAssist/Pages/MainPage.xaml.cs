@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace RoRAssist.Pages
+namespace RoRAssistWinApp.Pages
 {
     /// <summary>
     /// Interaction logic for MainPage.xaml
