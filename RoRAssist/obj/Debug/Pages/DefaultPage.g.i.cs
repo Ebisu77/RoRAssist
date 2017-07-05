@@ -100,7 +100,7 @@ namespace RoRAssist.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RoRAssist;component/pages/defaultpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RoRAssist.WinApp;component/pages/defaultpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\DefaultPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

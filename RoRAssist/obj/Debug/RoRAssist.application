@@ -4,7 +4,7 @@
   <description asmv2:publisher="RoRAssist" asmv2:product="RoRAssist" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="RoRAssist.exe.manifest" size="14795">
@@ -14,7 +14,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TgsYpD7dEkJGT7QYzn8CP5FXo5BGjLCavz8NmgRxb6I=</dsig:DigestValue>
+        <dsig:DigestValue>QcPBJ8PffdbVNrNTVtME5AloVdXAhg9gnQEUFzFCIyc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

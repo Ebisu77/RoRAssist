@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Cloud\OneDrive\Programming\Repo\RoRAssist\RoRAssist\obj\Debug\
+D:\Repository\RoRAssist\RoRAssist\obj\Debug\
 RoRAssist
 none
 false
 DEBUG;TRACE
-D:\Cloud\OneDrive\Programming\Repo\RoRAssist\RoRAssist\App.xaml
+D:\Repository\RoRAssist\RoRAssist\App.xaml
 7-205046351
 
 13684324209
-191138891852
+191099724918
 MainWindow.xaml;Pages\DefaultPage.xaml;Pages\MainPage.xaml;Pages\PersuasionPage.xaml;Pages\PlayersInputPage.xaml;Pages\SenatePage.xaml;Pages\StateTreasuryPage.xaml;
 
 False

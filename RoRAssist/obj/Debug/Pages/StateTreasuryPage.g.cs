@@ -314,7 +314,7 @@ namespace RoRAssist.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RoRAssist;component/pages/statetreasurypage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RoRAssist.WinApp;component/pages/statetreasurypage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\StateTreasuryPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

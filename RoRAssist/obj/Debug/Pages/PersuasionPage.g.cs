@@ -154,7 +154,7 @@ namespace RoRAssist.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RoRAssist;component/pages/persuasionpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RoRAssist.WinApp;component/pages/persuasionpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\PersuasionPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
