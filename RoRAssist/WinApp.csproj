@@ -108,20 +108,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Pages\PersuasionPage.xaml.cs">
+    <Compile Include="View\Pages\PersuasionPage.xaml.cs">
       <DependentUpon>PersuasionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PlayersInputPage.xaml.cs">
+    <Compile Include="View\Pages\PlayersInputPage.xaml.cs">
       <DependentUpon>PlayersInputPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SenatePage.xaml.cs">
+    <Compile Include="View\Pages\SenatePage.xaml.cs">
       <DependentUpon>SenatePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\StateTreasuryPage.xaml.cs">
+    <Compile Include="View\Pages\StateTreasuryPage.xaml.cs">
       <DependentUpon>StateTreasuryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Service\Calculations.cs" />
-    <Compile Include="Service\Constants.cs" />
+    <Compile Include="ViewModel\Calculations.cs" />
+    <Compile Include="ViewModel\Constants.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,36 +134,36 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\DefaultPage.xaml">
+    <Page Include="View\Pages\DefaultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MainPage.xaml">
+    <Page Include="View\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PersuasionPage.xaml">
+    <Page Include="View\Pages\PersuasionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PlayersInputPage.xaml">
+    <Page Include="View\Pages\PlayersInputPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SenatePage.xaml">
+    <Page Include="View\Pages\SenatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\StateTreasuryPage.xaml">
+    <Page Include="View\Pages\StateTreasuryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\DefaultPage.xaml.cs">
+    <Compile Include="View\Pages\DefaultPage.xaml.cs">
       <DependentUpon>DefaultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MainPage.xaml.cs">
+    <Compile Include="View\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">

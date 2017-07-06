@@ -26,7 +26,7 @@
                     Click="quitButton_Click"/>
         </StackPanel>
         <TextBlock Name="versionTextBlock" Grid.Row="2"
-                   HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                    Text="{Binding}"/>
 
     </Grid>
