@@ -108,6 +108,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\MetaDataModel.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="View\Pages\PersuasionPage.xaml.cs">
       <DependentUpon>PersuasionPage.xaml</DependentUpon>
     </Compile>

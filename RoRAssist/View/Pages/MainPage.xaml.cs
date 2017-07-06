@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using RoRAssistWinApp.ViewModel;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,34 +13,28 @@ namespace RoRAssistWinApp.Pages
 		public MainPage()
 		{
 			InitializeComponent();
-			displayVersionNumber();
+			DisplayVersionNumber();
 		}
 
-		private void displayVersionNumber()
+		private void DisplayVersionNumber()
 		{
-			Assembly executingAssembly = Assembly.GetExecutingAssembly();
-			FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(executingAssembly.Location);
-
-			string versionMajor = versionInfo.ProductMajorPart.ToString();
-			string versionMinor = versionInfo.ProductMinorPart.ToString();
-			string versionBuild = versionInfo.ProductBuildPart.ToString();
-
-			versionTextBlock.DataContext = "v. " + versionMajor + "." + versionMinor + "." + versionBuild;
+			var vm = new MainPageViewModel();
+			versionTextBlock.DataContext = vm.GetVersionNumber();
 		}
 
-		private void continueButton_Click(object sender, RoutedEventArgs e)
+		private void ContinueButton_Click(object sender, RoutedEventArgs e)
 		{
 			DefaultPage newPage = new DefaultPage();
 			this.NavigationService.Navigate(newPage);
 		}
 
-		private void startButton_Click(object sender, RoutedEventArgs e)
+		private void StartButton_Click(object sender, RoutedEventArgs e)
 		{
 			PlayersInputPage newPage = new PlayersInputPage();
 			this.NavigationService.Navigate(newPage);
 		}
 
-		private void quitButton_Click(object sender, RoutedEventArgs e)
+		private void QuitButton_Click(object sender, RoutedEventArgs e)
 		{
 			App.Current.Shutdown();
 		}

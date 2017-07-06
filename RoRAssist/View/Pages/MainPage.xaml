@@ -17,13 +17,13 @@
         </Grid.RowDefinitions>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
             <Button x:Name="continueButton"  Content="Continue Session" 
-                    Margin="20" Click="continueButton_Click"                    />
+                    Margin="20" Click="ContinueButton_Click"                    />
             <Button x:Name="startButton"  Content="New Session" 
                     Margin="20"
-                    Click="startButton_Click"/>
+                    Click="StartButton_Click"/>
             <Button x:Name="quitButton" Content="Quit" 
                     Margin="20"
-                    Click="quitButton_Click"/>
+                    Click="QuitButton_Click"/>
         </StackPanel>
         <TextBlock Name="versionTextBlock" Grid.Row="2"
                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
