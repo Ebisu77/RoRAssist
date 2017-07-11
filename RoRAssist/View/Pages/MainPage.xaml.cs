@@ -19,24 +19,24 @@ namespace RoRAssistWinApp.Pages
 		private void DisplayVersionNumber()
 		{
 			var vm = new MainPageViewModel();
-			versionTextBlock.DataContext = vm.GetVersionNumber();
+			versionTextBlock.DataContext = vm.VersionNumber;
 		}
 
 		private void ContinueButton_Click(object sender, RoutedEventArgs e)
 		{
 			DefaultPage newPage = new DefaultPage();
-			this.NavigationService.Navigate(newPage);
+			NavigationService.Navigate(newPage);
 		}
 
 		private void StartButton_Click(object sender, RoutedEventArgs e)
 		{
 			PlayersInputPage newPage = new PlayersInputPage();
-			this.NavigationService.Navigate(newPage);
+			NavigationService.Navigate(newPage);
 		}
 
 		private void QuitButton_Click(object sender, RoutedEventArgs e)
 		{
-			App.Current.Shutdown();
+			Application.Current.Shutdown();
 		}
 	}
 }

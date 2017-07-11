@@ -10,22 +10,22 @@ namespace RoRAssistWinApp.Pages
 			InitializeComponent();
 		}
 
-		private void persuadeButton_Click(object sender, RoutedEventArgs e)
+		private void PersuadeButton_Click(object sender, RoutedEventArgs e)
 		{
 			PersuasionPage page = new PersuasionPage();
-			this.FrameGameplayContent.Navigate(page);
+			FrameGameplayContent.Navigate(page);
 		}
 
-		private void stateTreasuryButton_Click(object sender, RoutedEventArgs e)
+		private void StateTreasuryButton_Click(object sender, RoutedEventArgs e)
 		{
 			StateTreasuryPage page = new StateTreasuryPage();
-			this.FrameGameplayContent.Navigate(page);
+			FrameGameplayContent.Navigate(page);
 		}
 
-		private void senateButton_Click(object sender, RoutedEventArgs e)
+		private void SenateButton_Click(object sender, RoutedEventArgs e)
 		{
 			SenatePage page = new SenatePage();
-			this.FrameGameplayContent.Navigate(page);
+			FrameGameplayContent.Navigate(page);
 		}
 	}
 }

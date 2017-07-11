@@ -4,11 +4,18 @@ namespace RoRAssistWinApp.ViewModel
 {
 	internal class MainPageViewModel
 	{
-		internal string GetVersionNumber()
-		{
-			var model = new MetaDataModel();
-			var versionInfo = model.GetFileVersionInfo();
+		private MetaDataModel model;
 
+		internal string VersionNumber => GetVersionNumber();
+
+		public MainPageViewModel()
+		{
+			model = new MetaDataModel();
+		}
+
+		private string GetVersionNumber()
+		{
+			var versionInfo = model.GetFileVersionInfo();
 			return $"v. {versionInfo.ProductMajorPart}.{versionInfo.ProductMinorPart}.{versionInfo.ProductBuildPart}";
 		}
 	}

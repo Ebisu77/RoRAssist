@@ -16,9 +16,9 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" >
             <Button x:Name="turnOrderButton" Content ="Turn Order" Width="Auto"/>
-            <Button x:Name="stateTreasuryButton" Content="State Treasury" Width="Auto" Click="stateTreasuryButton_Click"/>
-            <Button x:Name="persuadeButton" Content="Persuasion" Width="Auto" Click="persuadeButton_Click"  />
-            <Button x:Name="senateButton" Content="Senate" Width="Auto" Click="senateButton_Click" />
+            <Button x:Name="stateTreasuryButton" Content="State Treasury" Width="Auto" Click="StateTreasuryButton_Click"/>
+            <Button x:Name="persuadeButton" Content="Persuasion" Width="Auto" Click="PersuadeButton_Click"  />
+            <Button x:Name="senateButton" Content="Senate" Width="Auto" Click="SenateButton_Click" />
             <Button x:Name="combatButton" Content="Combat" Width="Auto"/>
         </StackPanel>
         <Frame Name="FrameGameplayContent" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
