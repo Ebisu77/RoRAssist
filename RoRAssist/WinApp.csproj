@@ -110,6 +110,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\MetaDataModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\PersuasionPageViewModel.cs" />
     <Compile Include="View\Pages\PersuasionPage.xaml.cs">
       <DependentUpon>PersuasionPage.xaml</DependentUpon>
     </Compile>

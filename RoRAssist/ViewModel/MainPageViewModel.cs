@@ -6,7 +6,7 @@ namespace RoRAssistWinApp.ViewModel
 	{
 		private MetaDataModel model;
 
-		internal string VersionNumber => GetVersionNumber();
+		public string VersionNumber => GetVersionNumber();
 
 		public MainPageViewModel()
 		{

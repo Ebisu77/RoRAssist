@@ -1,6 +1,4 @@
 ﻿using RoRAssistWinApp.ViewModel;
-using System.Diagnostics;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,13 +11,7 @@ namespace RoRAssistWinApp.Pages
 		public MainPage()
 		{
 			InitializeComponent();
-			DisplayVersionNumber();
-		}
-
-		private void DisplayVersionNumber()
-		{
-			var vm = new MainPageViewModel();
-			versionTextBlock.DataContext = vm.VersionNumber;
+			DataContext = new MainPageViewModel();
 		}
 
 		private void ContinueButton_Click(object sender, RoutedEventArgs e)
