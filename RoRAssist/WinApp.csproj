@@ -108,7 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\MetaDataModel.cs" />
+    <Compile Include="Model\PersuasionModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\PersuasionPageViewModel.cs" />
     <Compile Include="View\Pages\PersuasionPage.xaml.cs">
@@ -217,7 +220,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Core\RoRAssist.Core.csproj">
+      <Project>{9daefbc6-d0e6-429e-abaa-818fc46b2916}</Project>
+      <Name>RoRAssist.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

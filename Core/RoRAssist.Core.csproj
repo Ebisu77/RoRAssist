@@ -7,8 +7,8 @@
     <ProjectGuid>{9DAEFBC6-D0E6-429E-ABAA-818FC46B2916}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core</RootNamespace>
-    <AssemblyName>Core</AssemblyName>
+    <RootNamespace>RoRAssist.Core</RootNamespace>
+    <AssemblyName>RoRAssist.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,7 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DA\PersuasionRepository.cs" />
+    <Compile Include="DA\XmlRepository.cs" />
+    <Compile Include="Model\Persuasion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\CurrentSession.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

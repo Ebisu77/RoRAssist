@@ -2,7 +2,7 @@
 
 namespace RoRAssistWinApp.ViewModel
 {
-	internal class MainPageViewModel
+	internal class MainPageViewModel : BaseViewModel
 	{
 		private MetaDataModel model;
 

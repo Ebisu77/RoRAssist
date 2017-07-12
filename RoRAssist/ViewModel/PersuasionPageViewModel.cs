@@ -1,22 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RoRAssistWinApp.Model;
 
 namespace RoRAssistWinApp.ViewModel
 {
-	internal class PersuasionPageViewModel : INotifyPropertyChanged
+	internal class PersuasionPageViewModel : BaseViewModel
 	{
-		public event PropertyChangedEventHandler PropertyChanged;
+		private PersuasionModel model;
+		private int oratory;
 
-		private PersuasionPageViewModel() { }
-
-		public static PersuasionPageViewModel CreateNewPersuasionPageViewModel()
+		public int Oratory
 		{
-			return new PersuasionPageViewModel();
+			get { return oratory; }
+			set
+			{
+				oratory = value;
+				NotifyPropertyChanged("Oratory");
+				model.SaveData(this);
+			}
 		}
 
+		public PersuasionPageViewModel()
+		{
+			model = new PersuasionModel();
+		}
 	}
 }

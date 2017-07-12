@@ -30,7 +30,8 @@
             <DockPanel Margin="10">
                 <Label Content="Oratory: " HorizontalAlignment="Left"/>
                 <xctk:IntegerUpDown x:Name="setOratory" HorizontalAlignment="Right"
-                      Value="3" Increment="1" ValueChanged="OnValueChanged"/>
+                      Value="{Binding Oratory}" Increment="1" ValueChanged="OnValueChanged"
+					 />
             </DockPanel>
             <DockPanel Margin="10">
                 <Label Content="Influence: " HorizontalAlignment="Left" />
