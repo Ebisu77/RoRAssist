@@ -11,7 +11,8 @@ namespace RoRAssistWinApp.Model
 
 			var persuasion = new RoRAssist.Core.Model.Persuasion()
 			{
-				Oratory = viewModel.Oratory
+				Oratory = viewModel.Oratory,
+				Influence = viewModel.Influence
 			};
 
 			new PersuasionRepository().Save(persuasion);

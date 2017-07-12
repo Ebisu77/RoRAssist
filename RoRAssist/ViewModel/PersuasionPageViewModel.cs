@@ -6,6 +6,7 @@ namespace RoRAssistWinApp.ViewModel
 	{
 		private PersuasionModel model;
 		private int oratory;
+		private int influence;
 
 		public int Oratory
 		{
@@ -13,7 +14,18 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				oratory = value;
-				NotifyPropertyChanged("Oratory");
+				NotifyPropertyChanged(nameof(Oratory));
+				model.SaveData(this);
+			}
+		}
+
+		public int Influence
+		{
+			get { return influence; }
+			set
+			{
+				influence = value;
+				NotifyPropertyChanged(nameof(Influence));
 				model.SaveData(this);
 			}
 		}

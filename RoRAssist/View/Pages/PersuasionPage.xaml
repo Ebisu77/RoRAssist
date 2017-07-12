@@ -2,90 +2,89 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:RoRAssistWinApp.Pages"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="768" d:DesignWidth="1024"
       Title="PersuasionPage">
 
-    <Grid x:Name="MainGrid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+	<Grid x:Name="MainGrid">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="70" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="auto" />
+			<ColumnDefinition Width="100" />
+			<ColumnDefinition Width="auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" 
+		<StackPanel Grid.Column="1" Grid.Row="1"
                         VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Label Content="Attacking senator" HorizontalAlignment="Center"/>
-            <DockPanel Margin="10">
-                <Label Content="Oratory: " HorizontalAlignment="Left"/>
-                <xctk:IntegerUpDown x:Name="setOratory" HorizontalAlignment="Right"
-                      Value="{Binding Oratory}" Increment="1" ValueChanged="OnValueChanged"
-					 />
-            </DockPanel>
-            <DockPanel Margin="10">
-                <Label Content="Influence: " HorizontalAlignment="Left" />
-                <xctk:IntegerUpDown x:Name="setInfluence" HorizontalAlignment="Right"
-                        Value="7" Increment="1" ValueChanged="OnValueChanged"/>
-            </DockPanel>
-            <DockPanel Margin="10">
-                <Label Content="Bribe: " HorizontalAlignment="Left"/>
-                <xctk:IntegerUpDown x:Name="setBribe" HorizontalAlignment="Right"
-                        Value="1" Increment="1" ValueChanged="OnValueChanged"/>
-            </DockPanel>
-        </StackPanel>
+			<Label Content="Attacking senator" HorizontalAlignment="Center" />
+			<DockPanel Margin="10">
+				<Label Content="Oratory: " HorizontalAlignment="Left" />
+				<xctk:IntegerUpDown x:Name="setOratory" HorizontalAlignment="Right"
+                      Value="{Binding Oratory}" Increment="1" ValueChanged="OnValueChanged" />
+			</DockPanel>
+			<DockPanel Margin="10">
+				<Label Content="Influence: " HorizontalAlignment="Left" />
+				<xctk:IntegerUpDown x:Name="setInfluence" HorizontalAlignment="Right"
+                        Value="{Binding Influence}" Increment="1" ValueChanged="OnValueChanged" />
+			</DockPanel>
+			<DockPanel Margin="10">
+				<Label Content="Bribe: " HorizontalAlignment="Left" />
+				<xctk:IntegerUpDown x:Name="setBribe" HorizontalAlignment="Right"
+                        Value="1" Increment="1" ValueChanged="OnValueChanged" />
+			</DockPanel>
+		</StackPanel>
 
-        <StackPanel Grid.Column="3" Grid.Row="1" 
+		<StackPanel Grid.Column="3" Grid.Row="1"
                         VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Label Content="Defending senator" HorizontalAlignment="Center"/>
-            <DockPanel Margin="10">
-                <Label Content="Loyalty: " HorizontalAlignment="Right"
-                           Width="auto"/>
-                <xctk:IntegerUpDown x:Name="setLoyalty" HorizontalAlignment="Right"
-                        Value="7" Increment="1" ValueChanged="OnValueChanged"/>
-            </DockPanel>
-            <DockPanel Margin="10">
-                <Label Content="Personal Treasury: "  HorizontalAlignment="Right"
-                           Width="auto"/>
-                <xctk:IntegerUpDown x:Name="setPersonalTreasury" HorizontalAlignment="Right"
-                        Value="1" Increment="1" ValueChanged="OnValueChanged"/>
-            </DockPanel>
-            <DockPanel Margin="10">
-                <Label Content="Counter Bribe: " HorizontalAlignment="Right"
-                           Width="auto"/>
-                <xctk:IntegerUpDown x:Name="setCounterBribe" HorizontalAlignment="Right"
-                        Value="1" Increment="1" ValueChanged="OnValueChanged"/>
-            </DockPanel>
-            <DockPanel Margin="10">
-                <CheckBox x:Name="senatorAlignementCheckbox" HorizontalAlignment="Right"
+			<Label Content="Defending senator" HorizontalAlignment="Center" />
+			<DockPanel Margin="10">
+				<Label Content="Loyalty: " HorizontalAlignment="Right"
+                           Width="auto" />
+				<xctk:IntegerUpDown x:Name="setLoyalty" HorizontalAlignment="Right"
+                        Value="7" Increment="1" ValueChanged="OnValueChanged" />
+			</DockPanel>
+			<DockPanel Margin="10">
+				<Label Content="Personal Treasury: "  HorizontalAlignment="Right"
+                           Width="auto" />
+				<xctk:IntegerUpDown x:Name="setPersonalTreasury" HorizontalAlignment="Right"
+                        Value="1" Increment="1" ValueChanged="OnValueChanged" />
+			</DockPanel>
+			<DockPanel Margin="10">
+				<Label Content="Counter Bribe: " HorizontalAlignment="Right"
+                           Width="auto" />
+				<xctk:IntegerUpDown x:Name="setCounterBribe" HorizontalAlignment="Right"
+                        Value="1" Increment="1" ValueChanged="OnValueChanged" />
+			</DockPanel>
+			<DockPanel Margin="10">
+				<CheckBox x:Name="senatorAlignementCheckbox" HorizontalAlignment="Right"
                         Content=" Senator in Faction" FlowDirection="RightToLeft"
-                        Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>
-            </DockPanel>
-            <DockPanel Margin="10">
-                <CheckBox x:Name="eraEndCheckbox" HorizontalAlignment="Right" 
+                        Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged" />
+			</DockPanel>
+			<DockPanel Margin="10">
+				<CheckBox x:Name="eraEndCheckbox" HorizontalAlignment="Right"
                         Content=" Era End" FlowDirection="RightToLeft"
-                        Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged"/>
-            </DockPanel>
-        </StackPanel>
+                        Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged" />
+			</DockPanel>
+		</StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
+		<StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
                     Orientation="Vertical" HorizontalAlignment="Center">
-            <TextBlock Text="Results" 
-                       HorizontalAlignment="Center" Margin="5"/>
-            <TextBlock x:Name="textBlockResultBaseNumber" Text="{Binding}"
-                       HorizontalAlignment="Center" Margin="5"/>
-            <TextBlock x:Name="textBlockResultDiceRoll" Text="{Binding}"
-                       HorizontalAlignment="Center" Margin="5"/>
-        </StackPanel>
-    </Grid>
+			<TextBlock Text="Results"
+                       HorizontalAlignment="Center" Margin="5" />
+			<TextBlock x:Name="textBlockResultBaseNumber" Text="{Binding}"
+                       HorizontalAlignment="Center" Margin="5" />
+			<TextBlock x:Name="textBlockResultDiceRoll" Text="{Binding}"
+                       HorizontalAlignment="Center" Margin="5" />
+		</StackPanel>
+	</Grid>
 </Page>
