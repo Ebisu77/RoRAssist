@@ -31,13 +31,24 @@ namespace RoRAssist.Core.DA
 			SaveFile();
 		}
 
+		internal XmlNodeContent GetXmlNodeContent(string pathToLastChild, string propertyName)
+		{
+			var node = document.SelectSingleNode(pathToLastChild + propertyName) as XmlNode;
+
+			return new XmlNodeContent()
+			{
+				pathToLastChild = pathToLastChild,
+				propertyName = node.Name,
+				value = node.InnerText
+			};
+		}
+
 		private void UpdateNode(XmlNodeContent nodeContent)
 		{
 			var node = document.SelectSingleNode(nodeContent.pathToLastChild + nodeContent.propertyName) as XmlNode;
+
 			if (node.Value != nodeContent.value)
-			{
 				node.InnerText = nodeContent.value;
-			}
 		}
 
 		private void SaveFile()

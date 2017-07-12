@@ -12,12 +12,7 @@ namespace RoRAssistWinApp.Pages
 			DataContext = new PersuasionPageViewModel();
 		}
 
-
-
-
-
 		//***********************************************************
-
 
 		////input variables from UI
 		//private bool senatorInFactionFlag, eraEndCardDrawnFlag;
@@ -107,5 +102,6 @@ namespace RoRAssistWinApp.Pages
 			//calculateResults();
 			//displayResults();
 		}
+	
 	}
 }

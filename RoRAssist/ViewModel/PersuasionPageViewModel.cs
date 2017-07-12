@@ -1,4 +1,5 @@
-﻿using RoRAssistWinApp.Model;
+﻿using System;
+using RoRAssistWinApp.Model;
 
 namespace RoRAssistWinApp.ViewModel
 {
@@ -7,6 +8,12 @@ namespace RoRAssistWinApp.ViewModel
 		private PersuasionModel model;
 		private int oratory;
 		private int influence;
+		private int bribe;
+		private int loyalty;
+		private int personalTreasury;
+		private int counterBribe;
+		private bool senatorInFactionSelected;
+		private bool eraEndSelected;
 
 		public int Oratory
 		{
@@ -30,9 +37,82 @@ namespace RoRAssistWinApp.ViewModel
 			}
 		}
 
+		public int Bribe
+		{
+			get { return bribe; }
+			set
+			{
+				bribe = value;
+				NotifyPropertyChanged(nameof(Bribe));
+				model.SaveData(this);
+			}
+		}
+
+		public int Loyalty
+		{
+			get { return loyalty; }
+			set
+			{
+				loyalty = value;
+				NotifyPropertyChanged(nameof(loyalty));
+				model.SaveData(this);
+			}
+		}
+
+		public int PersonalTreasury
+		{
+			get { return personalTreasury; }
+			set
+			{
+				personalTreasury = value;
+				NotifyPropertyChanged(nameof(personalTreasury));
+				model.SaveData(this);
+			}
+		}
+
+		public int CounterBribe
+		{
+			get { return counterBribe; }
+			set
+			{
+				counterBribe = value;
+				NotifyPropertyChanged(nameof(counterBribe));
+				model.SaveData(this);
+			}
+		}
+
+		public bool SenatorInFactionSelected
+		{
+			get { return senatorInFactionSelected; }
+			set
+			{
+				senatorInFactionSelected = value;
+				NotifyPropertyChanged(nameof(counterBribe));
+				model.SaveData(this);
+			}
+		}
+
+		public bool EraEndSelected
+		{
+			get { return eraEndSelected; }
+			set
+			{
+				eraEndSelected = value;
+				NotifyPropertyChanged(nameof(counterBribe));
+				model.SaveData(this);
+			}
+		}
+
 		public PersuasionPageViewModel()
 		{
 			model = new PersuasionModel();
+			LoadData();
+		}
+
+		private void LoadData()
+		{
+			model.UpdateModel();
+			this.Oratory = model.Oratory;
 		}
 	}
 }

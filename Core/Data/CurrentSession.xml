@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<content>
+<Content>
   <numberOfPlayers>6</numberOfPlayers>
   <players>
     <player playerID="0">Eva</player>
@@ -9,8 +9,14 @@
     <player playerID="4">Tom</player>
     <player playerID="5">Sue</player>
   </players>
-  <persuasion>
-    <oratory>32</oratory>
-    <influence>44</influence>
-  </persuasion>
-</content>
+  <Persuasion>
+    <Oratory>96</Oratory>
+    <Influence>0</Influence>
+    <Bribe>0</Bribe>
+    <Loyalty>0</Loyalty>
+    <PersonalTreasury>0</PersonalTreasury>
+    <CounterBribe>0</CounterBribe>
+    <SenatorInFaction>False</SenatorInFaction>
+    <EraEnd>False</EraEnd>
+  </Persuasion>
+</Content>
