@@ -40,16 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\PersuasionBL.cs" />
     <Compile Include="DA\PersuasionRepository.cs" />
     <Compile Include="DA\XmlRepository.cs" />
     <Compile Include="Model\Persuasion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BL\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data\CurrentSession.xml" />
+    <Content Include="Data\CurrentSession.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

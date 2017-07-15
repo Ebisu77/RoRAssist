@@ -6,10 +6,10 @@ namespace RoRAssist.Core.DA
 {
 	public class PersuasionRepository : XmlRepository
 	{
+		string pathToLastChild = "Content/Persuasion/";
+
 		public void Save(Persuasion persuasion)
 		{
-			var pathToLastChild = "Content/Persuasion/";
-
 			var xmlNodeHelpers = new List<XmlNodeContent>
 			{
 				new XmlNodeContent()
@@ -59,6 +59,18 @@ namespace RoRAssist.Core.DA
 					pathToLastChild = pathToLastChild,
 					propertyName = nameof(persuasion.EraEnd),
 					value = persuasion.EraEnd.ToString()
+				},
+				new XmlNodeContent()
+				{
+					pathToLastChild = pathToLastChild,
+					propertyName = nameof(persuasion.ResultBaseNumber),
+					value = persuasion.ResultBaseNumber.ToString()
+				},
+				new XmlNodeContent()
+				{
+					pathToLastChild = pathToLastChild,
+					propertyName = nameof(persuasion.ResultDiceRoll),
+					value = persuasion.ResultDiceRoll.ToString()
 				}
 			};
 
@@ -67,14 +79,19 @@ namespace RoRAssist.Core.DA
 
 		public Persuasion GetPersuasion()
 		{
-			var pathToLastChild = "Content/Persuasion/";
-
-			var result = new Persuasion()
+			return new Persuasion()
 			{
-				Oratory = int.Parse(GetXmlNodeContent(pathToLastChild, "Oratory").value)
+				Oratory = int.Parse(GetXmlNodeContent(pathToLastChild, "Oratory").value),
+				Influence = int.Parse(GetXmlNodeContent(pathToLastChild, "Influence").value),
+				Bribe = int.Parse(GetXmlNodeContent(pathToLastChild, "Bribe").value),
+				CounterBribe = int.Parse(GetXmlNodeContent(pathToLastChild, "CounterBribe").value),
+				PersonalTreasury = int.Parse(GetXmlNodeContent(pathToLastChild, "PersonalTreasury").value),
+				Loyalty = int.Parse(GetXmlNodeContent(pathToLastChild, "Loyalty").value),
+				SenatorInFaction = Convert.ToBoolean(GetXmlNodeContent(pathToLastChild, "SenatorInFaction").value),
+				EraEnd = Convert.ToBoolean(GetXmlNodeContent(pathToLastChild, "EraEnd").value),
+				ResultBaseNumber = int.Parse(GetXmlNodeContent(pathToLastChild, "ResultBaseNumber").value),
+				ResultDiceRoll = int.Parse(GetXmlNodeContent(pathToLastChild, "ResultDiceRoll").value)
 			};
-
-			return result;
 		}
 	}
 }

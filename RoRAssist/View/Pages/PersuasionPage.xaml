@@ -82,9 +82,9 @@
 					Orientation="Vertical" HorizontalAlignment="Center">
 			<TextBlock Text="Results"
 					   HorizontalAlignment="Center" Margin="5" />
-			<TextBlock x:Name="textBlockResultBaseNumber" Text="{Binding}"
+			<TextBlock x:Name="textBlockResultBaseNumber" Text="{Binding ResultBaseNumber, Mode=OneWay}"
 					   HorizontalAlignment="Center" Margin="5" />
-			<TextBlock x:Name="textBlockResultDiceRoll" Text="{Binding}"
+			<TextBlock x:Name="textBlockResultDiceRoll" Text="{Binding ResultDiceRoll, Mode=OneWay}"
 					   HorizontalAlignment="Center" Margin="5" />
 		</StackPanel>
 	</Grid>

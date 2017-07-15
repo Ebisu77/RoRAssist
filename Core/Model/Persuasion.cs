@@ -10,5 +10,7 @@
 		public int CounterBribe { get; set; }
 		public bool SenatorInFaction { get; set; }
 		public bool EraEnd { get; set; }
+		public int ResultBaseNumber { get; set; }
+		public int ResultDiceRoll { get; set; }
 	}
 }

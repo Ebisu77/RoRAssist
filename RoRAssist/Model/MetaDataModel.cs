@@ -11,11 +11,6 @@ namespace RoRAssistWinApp.Model
 			throw new NotImplementedException();
 		}
 
-		public override void UpdateModel()
-		{
-			throw new NotImplementedException();
-		}
-
 		internal FileVersionInfo GetFileVersionInfo()
 		{
 			var executingAssembly = Assembly.GetExecutingAssembly();

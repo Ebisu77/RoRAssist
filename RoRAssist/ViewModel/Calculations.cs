@@ -56,49 +56,5 @@
 		{
 			return finalTreasury - startingTreasury;
 		}
-
-		public static int CalculatePersuasionBaseNumber(int attackingSenatorOratory, int attackingSenatorInfluence,
-				int attackingSenatorBribe, int deffendingSenatorLoyalty, int deffendingSenatorPersonalTreasury,
-				int deffendingSenatorCounterBribe, bool senatorAlignementStatus)
-		{
-			//calculation support
-			int senatorAlignementValue;
-
-			//determining value for defending senator based on his faction alignement
-			senatorAlignementValue = (senatorAlignementStatus) ?
-				Service.Constants.DEFENDING_SENATOR_IN_FACTION : Service.Constants.DEFENDING_SENATOR_NEUTRAL;
-
-			//calculating result number and returning value
-			return (attackingSenatorOratory + attackingSenatorInfluence
-				+ attackingSenatorBribe) - (deffendingSenatorLoyalty + deffendingSenatorPersonalTreasury
-				+ deffendingSenatorCounterBribe + senatorAlignementValue);
-		}
-
-		public static int CalculatePersuasionDiceRoll(int persuasionBaseNumber, bool eraEndCardDrawn)
-		{
-			//calculate dice roll, return result
-			if (!eraEndCardDrawn)
-			{
-				if (persuasionBaseNumber <= 9)
-				{
-					return persuasionBaseNumber;
-				}
-				else
-				{
-					return Service.Constants.ERA_END_NOT_ACTIVE;
-				}
-			}
-			else
-			{
-				if (persuasionBaseNumber <= 8)
-				{
-					return persuasionBaseNumber;
-				}
-				else
-				{
-					return Service.Constants.ERA_END_ACTIVE;
-				}
-			}
-		}
 	}
 }

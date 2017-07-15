@@ -1,5 +1,4 @@
-﻿using System;
-using RoRAssistWinApp.Model;
+﻿using RoRAssistWinApp.Model;
 
 namespace RoRAssistWinApp.ViewModel
 {
@@ -14,6 +13,8 @@ namespace RoRAssistWinApp.ViewModel
 		private int counterBribe;
 		private bool senatorInFactionSelected;
 		private bool eraEndSelected;
+		private string resultBaseNumber;
+		private string resultDiceRoll;
 
 		public int Oratory
 		{
@@ -21,8 +22,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				oratory = value;
-				NotifyPropertyChanged(nameof(Oratory));
-				model.SaveData(this);
+				UpdateViewModel(nameof(Oratory));
 			}
 		}
 
@@ -32,8 +32,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				influence = value;
-				NotifyPropertyChanged(nameof(Influence));
-				model.SaveData(this);
+				UpdateViewModel(nameof(Influence));
 			}
 		}
 
@@ -43,8 +42,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				bribe = value;
-				NotifyPropertyChanged(nameof(Bribe));
-				model.SaveData(this);
+				UpdateViewModel(nameof(Bribe));
 			}
 		}
 
@@ -54,8 +52,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				loyalty = value;
-				NotifyPropertyChanged(nameof(loyalty));
-				model.SaveData(this);
+				UpdateViewModel(nameof(Loyalty));
 			}
 		}
 
@@ -65,8 +62,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				personalTreasury = value;
-				NotifyPropertyChanged(nameof(personalTreasury));
-				model.SaveData(this);
+				UpdateViewModel(nameof(PersonalTreasury));
 			}
 		}
 
@@ -76,8 +72,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				counterBribe = value;
-				NotifyPropertyChanged(nameof(counterBribe));
-				model.SaveData(this);
+				UpdateViewModel(nameof(CounterBribe));
 			}
 		}
 
@@ -87,8 +82,7 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				senatorInFactionSelected = value;
-				NotifyPropertyChanged(nameof(counterBribe));
-				model.SaveData(this);
+				UpdateViewModel(nameof(SenatorInFactionSelected));
 			}
 		}
 
@@ -98,21 +92,66 @@ namespace RoRAssistWinApp.ViewModel
 			set
 			{
 				eraEndSelected = value;
-				NotifyPropertyChanged(nameof(counterBribe));
-				model.SaveData(this);
+				UpdateViewModel(nameof(EraEndSelected));
+			}
+		}
+
+		public string ResultBaseNumber
+		{
+			get { return resultBaseNumber; }
+			set
+			{
+				resultBaseNumber = value;
+				NotifyPropertyChanged(nameof(ResultBaseNumber));
+			}
+		}
+
+		public string ResultDiceRoll
+		{
+			get { return resultDiceRoll; }
+			set
+			{
+				resultDiceRoll = value;
+				NotifyPropertyChanged(nameof(ResultDiceRoll));
 			}
 		}
 
 		public PersuasionPageViewModel()
 		{
 			model = new PersuasionModel();
-			LoadData();
+			Oratory = model.Oratory;
+			Influence = model.Influence;
+			Bribe = model.Bribe;
+			Loyalty = model.Loyalty;
+			PersonalTreasury = model.PersonalTreasury;
+			CounterBribe = model.CounterBribe;
+			SenatorInFactionSelected = model.SenatorInFaction;
+			EraEndSelected = model.EraEnd;
+			ResultBaseNumber = GetFormatedBaseNumber(model.BaseNumber);
+			ResultDiceRoll = GetFormatedDiceRoll(model.DiceRoll);
 		}
 
-		private void LoadData()
+		private void UpdateViewModel(string propertyName)
 		{
-			model.UpdateModel();
-			this.Oratory = model.Oratory;
+			NotifyPropertyChanged(propertyName);
+			model.SaveData(this);
+			ResultBaseNumber = GetFormatedBaseNumber(model.BaseNumber);
+			ResultDiceRoll = GetFormatedDiceRoll(model.DiceRoll);
+		}
+
+		private string GetFormatedDiceRoll(int diceRoll)
+		{
+			if (diceRoll >= 3)
+				return "You have to roll " + diceRoll + " or less on two dice";
+			else if (diceRoll == 2)
+				return "You have to roll " + diceRoll + " on two dice";
+			else
+				return "Dice roll is not possible";
+		}
+
+		private string GetFormatedBaseNumber(int baseNumber)
+		{
+			return "Base number is " + baseNumber;
 		}
 	}
 }
