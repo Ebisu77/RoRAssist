@@ -11,14 +11,14 @@
   </players>
   <Persuasion>
     <Oratory>4</Oratory>
-    <Influence>17</Influence>
-    <Bribe>4</Bribe>
-    <Loyalty>5</Loyalty>
+    <Influence>7</Influence>
+    <Bribe>13</Bribe>
+    <Loyalty>11</Loyalty>
     <PersonalTreasury>1</PersonalTreasury>
-    <CounterBribe>0</CounterBribe>
+    <CounterBribe>9</CounterBribe>
     <SenatorInFaction>False</SenatorInFaction>
-    <EraEnd>True</EraEnd>
-    <ResultBaseNumber>19</ResultBaseNumber>
-    <ResultDiceRoll>9</ResultDiceRoll>
+    <EraEnd>False</EraEnd>
+    <ResultBaseNumber>3</ResultBaseNumber>
+    <ResultDiceRoll>3</ResultDiceRoll>
   </Persuasion>
 </Content>
