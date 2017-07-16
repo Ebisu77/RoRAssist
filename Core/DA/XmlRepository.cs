@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Xml;
 
 namespace RoRAssist.Core.DA
 {
 	public class XmlRepository
 	{
-		private XmlDocument document;
+		private readonly XmlDocument document;
 
 		internal struct XmlNodeContent
 		{
@@ -17,8 +18,8 @@ namespace RoRAssist.Core.DA
 		internal XmlRepository()
 		{
 			document = new XmlDocument();
-			// TODO: path to config or embeded resource or constant? + probably class for extracting values from config...
-			document.Load(@"D:\Repository\RoRAssist\Core\Data\CurrentSession.xml");
+			// TODO: path to config or embedded resource or constant? + probably class for extracting values from config...
+			document.Load(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Core\Data\CurrentSession.xml"));
 		}
 
 		internal void SaveToXml(List<XmlNodeContent> nodes)
@@ -53,7 +54,7 @@ namespace RoRAssist.Core.DA
 
 		private void SaveFile()
 		{
-			document.Save(@"D:\Repository\RoRAssist\Core\Data\CurrentSession.xml");
+			document.Save(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Core\Data\CurrentSession.xml"));
 		}
 	}
 }

@@ -14,6 +14,8 @@ namespace RoRAssistWinApp.Service
 		public const int LAND_BILL_3 = 10;
 
 		// path to data folder
-		public static string pathToPlayersData = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRassist\Data\Players.xml");
+		private static string pathToPlayersData = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRassist\Data\Players.xml");
+
+		public static string PathToPlayersData { get => pathToPlayersData; set => pathToPlayersData = value; }
 	}
 }

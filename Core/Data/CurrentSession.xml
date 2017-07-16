@@ -10,15 +10,15 @@
     <player playerID="5">Sue</player>
   </players>
   <Persuasion>
-    <Oratory>4</Oratory>
-    <Influence>7</Influence>
-    <Bribe>13</Bribe>
-    <Loyalty>11</Loyalty>
-    <PersonalTreasury>1</PersonalTreasury>
-    <CounterBribe>9</CounterBribe>
-    <SenatorInFaction>False</SenatorInFaction>
-    <EraEnd>False</EraEnd>
-    <ResultBaseNumber>3</ResultBaseNumber>
-    <ResultDiceRoll>3</ResultDiceRoll>
+    <Oratory>5</Oratory>
+    <Influence>8</Influence>
+    <Bribe>7</Bribe>
+    <Loyalty>7</Loyalty>
+    <PersonalTreasury>7</PersonalTreasury>
+    <CounterBribe>7</CounterBribe>
+    <SenatorInFaction>True</SenatorInFaction>
+    <EraEnd>True</EraEnd>
+    <ResultBaseNumber>-8</ResultBaseNumber>
+    <ResultDiceRoll>-8</ResultDiceRoll>
   </Persuasion>
 </Content>

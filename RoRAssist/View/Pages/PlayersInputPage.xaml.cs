@@ -23,7 +23,7 @@ namespace RoRAssistWinApp.Pages
 		{
 			//create an instance of XML document
 			XmlDocument doc = new XmlDocument();
-			doc.Load(Service.Constants.pathToPlayersData);
+			doc.Load(Service.Constants.PathToPlayersData);
 
 			//save number of players into XML
 			XmlNode xmlPlayersCount = doc.SelectSingleNode("/content/numberOfPlayers");
@@ -54,7 +54,7 @@ namespace RoRAssistWinApp.Pages
 			}
 
 			//save results
-			doc.Save(Service.Constants.pathToPlayersData);
+			doc.Save(Service.Constants.PathToPlayersData);
 		}
 
 		private void displayPlayerTextboxes()

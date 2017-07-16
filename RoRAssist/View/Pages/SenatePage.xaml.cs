@@ -28,7 +28,7 @@ namespace RoRAssistWinApp.Pages
 		{
 			// create an instance of xml document
 			var xmlDoc = new XmlDocument();
-			xmlDoc.Load(Service.Constants.pathToPlayersData);
+			xmlDoc.Load(Service.Constants.PathToPlayersData);
 
 			// retrieve number of players
 			playersCount = Convert.ToInt32(xmlDoc.SelectSingleNode("//numberOfPlayers").InnerText);

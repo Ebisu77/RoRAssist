@@ -6,7 +6,7 @@ namespace RoRAssist.Core.DA
 {
 	public class PersuasionRepository : XmlRepository
 	{
-		string pathToLastChild = "Content/Persuasion/";
+		readonly string pathToLastChild = "Content/Persuasion/";
 
 		public void Save(Persuasion persuasion)
 		{
