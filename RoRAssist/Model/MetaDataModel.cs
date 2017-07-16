@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Reflection;
 
-namespace RoRAssistWinApp.Model
+namespace RoRAssist.WinApp.Model
 {
 	internal class MetaDataModel : BaseModel
 	{

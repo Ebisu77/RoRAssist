@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace RoRAssistWinApp.Pages
+namespace RoRAssist.WinApp.Pages
 {
 	//TODO: - use last year result as a new starting year treasury.
 	//TODO: - exception handling, if user hits delete inside integerUpDown box => invalid operation exception

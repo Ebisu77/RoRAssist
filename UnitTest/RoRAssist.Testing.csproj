@@ -69,9 +69,9 @@
       <Project>{9daefbc6-d0e6-429e-abaa-818fc46b2916}</Project>
       <Name>RoRAssist.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RoRAssist\WinApp.csproj">
+    <ProjectReference Include="..\RoRAssist\RoRAssist.WinApp.csproj">
       <Project>{30eb586a-a528-46b0-b882-8e7af13ebc2f}</Project>
-      <Name>WinApp</Name>
+      <Name>RoRAssist.WinApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

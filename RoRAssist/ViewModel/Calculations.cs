@@ -1,4 +1,4 @@
-﻿namespace RoRAssistWinApp.Service
+﻿namespace RoRAssist.WinApp.Service
 {
 	public static class Calculations
 	{

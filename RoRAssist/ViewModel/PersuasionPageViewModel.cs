@@ -1,6 +1,6 @@
-﻿using RoRAssistWinApp.Model;
+﻿using RoRAssist.WinApp.Model;
 
-namespace RoRAssistWinApp.ViewModel
+namespace RoRAssist.WinApp.ViewModel
 {
 	internal class PersuasionPageViewModel : BaseViewModel
 	{

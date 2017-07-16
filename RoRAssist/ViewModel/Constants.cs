@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace RoRAssistWinApp.Service
+namespace RoRAssist.WinApp.Service
 {
 	public static class Constants
 	{

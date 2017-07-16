@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace RoRAssistWinApp.ViewModel
+namespace RoRAssist.WinApp.ViewModel
 {
     internal abstract class BaseViewModel : INotifyPropertyChanged
     {

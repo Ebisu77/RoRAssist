@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace RoRAssistWinApp
+namespace RoRAssist.WinApp
 {
 	//TODO: general ideas:
 	//- play with visibility of UI elemnts (e.g. bold fontweight, tooltips, better grids,

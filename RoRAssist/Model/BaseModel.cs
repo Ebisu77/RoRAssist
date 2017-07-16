@@ -1,4 +1,4 @@
-﻿namespace RoRAssistWinApp.Model
+﻿namespace RoRAssist.WinApp.Model
 {
 	internal abstract class BaseModel
 	{

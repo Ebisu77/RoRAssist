@@ -1,8 +1,8 @@
 ﻿using RoRAssist.Core.BL;
 using RoRAssist.Core.DA;
-using RoRAssistWinApp.ViewModel;
+using RoRAssist.WinApp.ViewModel;
 
-namespace RoRAssistWinApp.Model
+namespace RoRAssist.WinApp.Model
 {
 	internal class PersuasionModel : BaseModel
 	{

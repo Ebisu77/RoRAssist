@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
 
-namespace RoRAssistWinApp.Pages
+namespace RoRAssist.WinApp.Pages
 {
 	public partial class SenatePage : Page
 	{

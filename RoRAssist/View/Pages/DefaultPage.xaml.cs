@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace RoRAssistWinApp.Pages
+namespace RoRAssist.WinApp.Pages
 {
 	public partial class DefaultPage : Page
 	{
