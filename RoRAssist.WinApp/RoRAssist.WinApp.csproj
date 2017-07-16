@@ -224,7 +224,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\RoRAssist.Core.csproj">
+    <ProjectReference Include="..\RoRAssist.Core\RoRAssist.Core.csproj">
       <Project>{9daefbc6-d0e6-429e-abaa-818fc46b2916}</Project>
       <Name>RoRAssist.Core</Name>
     </ProjectReference>

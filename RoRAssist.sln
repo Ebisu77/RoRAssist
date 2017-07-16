@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoRAssist.WinApp", "RoRAssist\RoRAssist.WinApp.csproj", "{30EB586A-A528-46B0-B882-8E7AF13EBC2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoRAssist.WinApp", "RoRAssist.WinApp\RoRAssist.WinApp.csproj", "{30EB586A-A528-46B0-B882-8E7AF13EBC2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoRAssist.Testing", "UnitTest\RoRAssist.Testing.csproj", "{B5D5EE02-FE5A-4B79-AA88-B59D8B094398}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoRAssist.Testing", "RoRAssist.Testing\RoRAssist.Testing.csproj", "{B5D5EE02-FE5A-4B79-AA88-B59D8B094398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoRAssist.Core", "Core\RoRAssist.Core.csproj", "{9DAEFBC6-D0E6-429E-ABAA-818FC46B2916}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoRAssist.Core", "RoRAssist.Core\RoRAssist.Core.csproj", "{9DAEFBC6-D0E6-429E-ABAA-818FC46B2916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

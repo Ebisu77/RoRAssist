@@ -19,7 +19,7 @@ namespace RoRAssist.Core.DA
 		{
 			document = new XmlDocument();
 			// TODO: path to config or embedded resource or constant? + probably class for extracting values from config...
-			document.Load(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Core\Data\CurrentSession.xml"));
+			document.Load(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRAssist.Core\Data\CurrentSession.xml"));
 		}
 
 		internal void SaveToXml(List<XmlNodeContent> nodes)
@@ -54,7 +54,7 @@ namespace RoRAssist.Core.DA
 
 		private void SaveFile()
 		{
-			document.Save(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Core\Data\CurrentSession.xml"));
+			document.Save(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRAssist.Core\Data\CurrentSession.xml"));
 		}
 	}
 }

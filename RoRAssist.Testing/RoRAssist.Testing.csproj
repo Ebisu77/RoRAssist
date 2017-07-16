@@ -65,11 +65,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\RoRAssist.Core.csproj">
+    <ProjectReference Include="..\RoRAssist.Core\RoRAssist.Core.csproj">
       <Project>{9daefbc6-d0e6-429e-abaa-818fc46b2916}</Project>
       <Name>RoRAssist.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RoRAssist\RoRAssist.WinApp.csproj">
+    <ProjectReference Include="..\RoRAssist.WinApp\RoRAssist.WinApp.csproj">
       <Project>{30eb586a-a528-46b0-b882-8e7af13ebc2f}</Project>
       <Name>RoRAssist.WinApp</Name>
     </ProjectReference>
