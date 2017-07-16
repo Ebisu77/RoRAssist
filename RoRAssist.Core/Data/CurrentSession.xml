@@ -10,7 +10,7 @@
     <player playerID="5">Sue</player>
   </players>
   <Persuasion>
-    <Oratory>7</Oratory>
+    <Oratory>4</Oratory>
     <Influence>9</Influence>
     <Bribe>6</Bribe>
     <Loyalty>9</Loyalty>
@@ -18,7 +18,7 @@
     <CounterBribe>2</CounterBribe>
     <SenatorInFaction>False</SenatorInFaction>
     <EraEnd>False</EraEnd>
-    <ResultBaseNumber>9</ResultBaseNumber>
-    <ResultDiceRoll>8</ResultDiceRoll>
+    <ResultBaseNumber>6</ResultBaseNumber>
+    <ResultDiceRoll>6</ResultDiceRoll>
   </Persuasion>
 </Content>
