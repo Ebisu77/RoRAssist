@@ -2,9 +2,9 @@
 
 namespace RoRAssist.WinApp.ViewModel
 {
-	internal class PersuasionPageViewModel : BaseViewModel
+	public class PersuasionPageViewModel : BaseViewModel
 	{
-		private PersuasionModel model;
+		private readonly PersuasionModel model;
 		private int oratory;
 		private int influence;
 		private int bribe;

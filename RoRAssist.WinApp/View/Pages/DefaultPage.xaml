@@ -1,27 +1,28 @@
 ﻿<Page x:Class="RoRAssist.WinApp.Pages.DefaultPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:RoRAssist.WinApp.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="768" d:DesignWidth="1024"
-      Title="DefaultPage">
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="768" d:DesignWidth="1024"
+	  Title="DefaultPage">
 
-
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" >
-            <Button x:Name="turnOrderButton" Content ="Turn Order" Width="Auto"/>
-            <Button x:Name="stateTreasuryButton" Content="State Treasury" Width="Auto" Click="StateTreasuryButton_Click"/>
-            <Button x:Name="persuadeButton" Content="Persuasion" Width="Auto" Click="PersuadeButton_Click"  />
-            <Button x:Name="senateButton" Content="Senate" Width="Auto" Click="SenateButton_Click" />
-            <Button x:Name="combatButton" Content="Combat" Width="Auto"/>
-        </StackPanel>
-        <Frame Name="FrameGameplayContent" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-
-    </Grid>
+	<Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button x:Name="turnOrderButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen">Test</Button>
+			<Button x:Name="stateTreasuryButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen" 
+					Click="StateTreasuryButton_Click">State Treasury</Button>
+			<Button x:Name="persuadeButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen" 
+					Click="PersuadeButton_Click">Persuasion</Button>
+			<Button x:Name="senateButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen" 
+					Click="SenateButton_Click">Senate</Button>
+			<Button x:Name="combatButton" Style="{StaticResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen">Combat</Button>
+		</StackPanel>
+		<Frame Name="FrameGameplayContent" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+	</Grid>
 </Page>

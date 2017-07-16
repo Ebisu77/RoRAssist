@@ -20,11 +20,11 @@ namespace RoRAssist.WinApp.Pages
 		public SenatePage()
 		{
 			InitializeComponent();
-			retrievePlayerData();
-			displayResults();
+			RetrievePlayerData();
+			DisplayResults();
 		}
 
-		private void retrievePlayerData()
+		private void RetrievePlayerData()
 		{
 			// create an instance of xml document
 			var xmlDoc = new XmlDocument();
@@ -41,7 +41,7 @@ namespace RoRAssist.WinApp.Pages
 			}
 		}
 
-		private void displayResults()
+		private void DisplayResults()
 		{
 			// set visibility of stackpanels
 			if (stackPlayer1 != null)

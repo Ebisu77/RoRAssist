@@ -2,7 +2,7 @@
 
 namespace RoRAssist.WinApp.ViewModel
 {
-    internal abstract class BaseViewModel : INotifyPropertyChanged
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

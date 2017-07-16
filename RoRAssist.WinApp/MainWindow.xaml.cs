@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace RoRAssist.WinApp
+﻿namespace RoRAssist.WinApp
 {
 	//TODO: general ideas:
 	//- play with visibility of UI elemnts (e.g. bold fontweight, tooltips, better grids,
@@ -18,7 +16,7 @@ namespace RoRAssist.WinApp
 	//- make page for fast sequence of play with main rules (+put rules numbers there for easy search in rules,
 	//  probably use flow document reader for this)
 
-	public partial class MainWindow : Window
+	public partial class MainWindow
 	{
 		public MainWindow()
 		{
