@@ -24,60 +24,44 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
-		<StackPanel Grid.Column="1" Grid.Row="1"
-						VerticalAlignment="Top" HorizontalAlignment="Center">
+		<StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center">
 			<Label Content="Attacking senator" HorizontalAlignment="Center" />
 			<DockPanel Margin="10">
 				<Label Content="Oratory: " HorizontalAlignment="Left" />
-				<!--<xctk:IntegerUpDown x:Name="setOratory" HorizontalAlignment="Right"
-					  Value="{Binding Oratory}" Increment="1" ValueChanged="OnValueChanged" />-->
-				<Controls:NumericUpDown Value="{Binding Oratory}" Interval="1"/>
+				<Controls:NumericUpDown Value="{Binding Oratory}" Interval="1" />
 			</DockPanel>
 			<DockPanel Margin="10">
 				<Label Content="Influence: " HorizontalAlignment="Left" />
-				<xctk:IntegerUpDown x:Name="setInfluence" HorizontalAlignment="Right"
-						Value="{Binding Influence}" Increment="1" ValueChanged="OnValueChanged" />
+				<Controls:NumericUpDown Value="{Binding Influence}" Interval="1" />
 			</DockPanel>
 			<DockPanel Margin="10">
 				<Label Content="Bribe: " HorizontalAlignment="Left" />
-				<xctk:IntegerUpDown x:Name="setBribe" HorizontalAlignment="Right"
-						Value="{Binding Bribe}" Increment="1" ValueChanged="OnValueChanged" />
+				<Controls:NumericUpDown Value="{Binding Bribe}" Interval="1" />
 			</DockPanel>
 		</StackPanel>
 
-		<StackPanel Grid.Column="3" Grid.Row="1"
-						VerticalAlignment="Top" HorizontalAlignment="Center">
+		<StackPanel Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center">
 			<Label Content="Defending senator" HorizontalAlignment="Center" />
 			<DockPanel Margin="10">
-				<Label Content="Loyalty: " HorizontalAlignment="Right"
-						   Width="auto" />
-				<xctk:IntegerUpDown x:Name="setLoyalty" HorizontalAlignment="Right"
-						Value="{Binding Loyalty}" Increment="1" ValueChanged="OnValueChanged" />
+				<Label Content="Loyalty: " HorizontalAlignment="Right" Width="auto" />
+				<Controls:NumericUpDown Value="{Binding Loyalty}" Interval="1" />
 			</DockPanel>
 			<DockPanel Margin="10">
-				<Label Content="Personal Treasury: "  HorizontalAlignment="Right"
-						   Width="auto" />
-				<xctk:IntegerUpDown x:Name="setPersonalTreasury" HorizontalAlignment="Right"
-						Value="{Binding PersonalTreasury}" Increment="1" ValueChanged="OnValueChanged" />
+				<Label Content="Personal Treasury: "  HorizontalAlignment="Right" Width="auto" />
+				<Controls:NumericUpDown Value="{Binding PersonalTreasury}" Interval="1" />
 			</DockPanel>
 			<DockPanel Margin="10">
-				<Label Content="Counter Bribe: " HorizontalAlignment="Right"
-						   Width="auto" />
-				<xctk:IntegerUpDown x:Name="setCounterBribe" HorizontalAlignment="Right"
-						Value="{Binding CounterBribe}" Increment="1" ValueChanged="OnValueChanged" />
+				<Label Content="Counter Bribe: " HorizontalAlignment="Right" Width="auto" />
+				<Controls:NumericUpDown Value="{Binding CounterBribe}" Interval="1" />
 			</DockPanel>
 			<DockPanel Margin="10">
-				<CheckBox x:Name="senatorAlignementCheckbox" HorizontalAlignment="Right"
-						Content=" Senator in Faction" FlowDirection="RightToLeft" 
-						IsChecked="{Binding SenatorInFactionSelected}"/>
+				<CheckBox x:Name="senatorAlignementCheckbox" HorizontalAlignment="Right" Content=" Senator in Faction" FlowDirection="RightToLeft"
+						IsChecked="{Binding SenatorInFactionSelected}" />
 			</DockPanel>
 			<DockPanel Margin="10">
-				<CheckBox x:Name="eraEndCheckbox" HorizontalAlignment="Right"
-						Content=" Era End" FlowDirection="RightToLeft"
-						IsChecked="{Binding EraEndSelected}"
-						Checked="OnCheckboxChanged" Unchecked="OnCheckboxChanged" />
+				<CheckBox x:Name="eraEndCheckbox" HorizontalAlignment="Right" Content=" Era End" FlowDirection="RightToLeft"
+						IsChecked="{Binding EraEndSelected}" />
 			</DockPanel>
-			
 		</StackPanel>
 
 		<StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"

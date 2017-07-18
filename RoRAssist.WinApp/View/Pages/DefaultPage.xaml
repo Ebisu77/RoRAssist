@@ -14,7 +14,6 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		<StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button x:Name="turnOrderButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen">Test</Button>
 			<Button x:Name="stateTreasuryButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen" 
 					Click="StateTreasuryButton_Click">State Treasury</Button>
 			<Button x:Name="persuadeButton" Style="{DynamicResource MetroFlatButton}" FontSize="15" Width="120px" Background="DarkSeaGreen" 
