@@ -6,7 +6,8 @@ namespace RoRAssist.Core.DA
 {
 	public class XmlRepository
 	{
-		private readonly XmlDocument document;
+		private readonly XmlDocument _document;
+		private readonly string _pathToXmlFile = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRAssist.Core\Data\CurrentSession.xml");
 
 		internal struct XmlNodeContent
 		{
@@ -17,9 +18,8 @@ namespace RoRAssist.Core.DA
 
 		internal XmlRepository()
 		{
-			document = new XmlDocument();
-			// TODO: path to config or embedded resource or constant? + probably class for extracting values from config...
-			document.Load(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRAssist.Core\Data\CurrentSession.xml"));
+			_document = new XmlDocument();
+			_document.Load(_pathToXmlFile);
 		}
 
 		internal void SaveToXml(List<XmlNodeContent> nodes)
@@ -34,7 +34,7 @@ namespace RoRAssist.Core.DA
 
 		internal XmlNodeContent GetXmlNodeContent(string pathToLastChild, string propertyName)
 		{
-			var node = document.SelectSingleNode(pathToLastChild + propertyName) as XmlNode;
+			var node = _document.SelectSingleNode(pathToLastChild + propertyName) as XmlNode;
 
 			return new XmlNodeContent()
 			{
@@ -46,7 +46,7 @@ namespace RoRAssist.Core.DA
 
 		private void UpdateNode(XmlNodeContent nodeContent)
 		{
-			var node = document.SelectSingleNode(nodeContent.pathToLastChild + nodeContent.propertyName) as XmlNode;
+			var node = _document.SelectSingleNode(nodeContent.pathToLastChild + nodeContent.propertyName) as XmlNode;
 
 			if (node.Value != nodeContent.value)
 				node.InnerText = nodeContent.value;
@@ -54,7 +54,7 @@ namespace RoRAssist.Core.DA
 
 		private void SaveFile()
 		{
-			document.Save(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\RoRAssist.Core\Data\CurrentSession.xml"));
+			_document.Save(_pathToXmlFile);
 		}
 	}
 }

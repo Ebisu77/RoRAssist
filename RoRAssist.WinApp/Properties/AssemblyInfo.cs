@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("RoRAssist")]
-[assembly: AssemblyCopyright("Copyright © 2017 Mario Sefc")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -42,9 +42,10 @@ using System.Windows;
 //      Major Version
 //      Minor Version
 //      Build Number
+//      Revision
 //
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.2.1")]
-[assembly: AssemblyFileVersion("0.2.1")]
+[assembly: AssemblyVersion("0.2.1.0")]
+[assembly: AssemblyFileVersion("0.2.1.0")]

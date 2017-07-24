@@ -71,7 +71,7 @@
 			<TextBlock x:Name="textBlockResultBaseNumber" Text="{Binding ResultBaseNumber, Mode=OneWay}"
 					   HorizontalAlignment="Center" Margin="5" />
 			<TextBlock x:Name="textBlockResultDiceRoll" Text="{Binding ResultDiceRoll, Mode=OneWay}"
-					   HorizontalAlignment="Center" Margin="5" />
+					   Background="DarkSeaGreen" HorizontalAlignment="Center" FontSize="16" FontWeight="DemiBold" Margin="10" />
 		</StackPanel>
 	</Grid>
 </Page>

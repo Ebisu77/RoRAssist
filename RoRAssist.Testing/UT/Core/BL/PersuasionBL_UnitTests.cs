@@ -4,15 +4,15 @@ using RoRAssist.Core.BL;
 
 namespace RoRAssist.Testing.UT.CoreBL
 {
+	[TestFixture]
 	public class PersuasionBL_UnitTests
 	{
-		[TestFixture]
 		public class CaltulateBaseNumber
 		{
 			[Test]
 			public void CalculateBaseNumber_SentarorInFaction_CorrectResult()
 			{
-				// Arange
+				// Arrange
 				var mock = CreatePersuasionMock(8, 6, 12, 4, 7, 3, true, false);
 
 				// Act
@@ -25,7 +25,7 @@ namespace RoRAssist.Testing.UT.CoreBL
 			[Test]
 			public void CalculateBaseNumber_SentarorNotInFaction_CorrectResult()
 			{
-				// Arange
+				// Arrange
 				var mock = CreatePersuasionMock(8, 6, 12, 4, 7, 3, false, false);
 
 				// Act
@@ -42,7 +42,7 @@ namespace RoRAssist.Testing.UT.CoreBL
 			[Test]
 			public void CalculateDiceRoll_EraEndRegularResult_CorrectResult()
 			{
-				// Arange
+				// Arrange
 				var mock = new Mock<Core.Model.Persuasion>();
 				mock.Object.EraEnd = true;
 				mock.Object.ResultBaseNumber = 7;
@@ -57,7 +57,7 @@ namespace RoRAssist.Testing.UT.CoreBL
 			[Test]
 			public void CalculateDiceRoll_EraEndHighResult_CorrectResult()
 			{
-				// Arange
+				// Arrange
 				var mock = new Mock<Core.Model.Persuasion>();
 				mock.Object.EraEnd = true;
 				mock.Object.ResultBaseNumber = 15;
@@ -72,7 +72,7 @@ namespace RoRAssist.Testing.UT.CoreBL
 			[Test]
 			public void CalculateDiceRoll_NoEraEndRegularResult_CorrectResult()
 			{
-				// Arange
+				// Arrange
 				var mock = new Mock<Core.Model.Persuasion>();
 				mock.Object.EraEnd = false;
 				mock.Object.ResultBaseNumber = 6;
@@ -87,7 +87,7 @@ namespace RoRAssist.Testing.UT.CoreBL
 			[Test]
 			public void CalculateDiceRoll_NoEraEndHighResult_CorrectResult()
 			{
-				// Arange
+				// Arrange
 				var mock = new Mock<Core.Model.Persuasion>();
 				mock.Object.EraEnd = false;
 				mock.Object.ResultBaseNumber = 15;

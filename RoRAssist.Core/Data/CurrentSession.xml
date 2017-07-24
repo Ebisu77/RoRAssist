@@ -14,11 +14,11 @@
     <Influence>1</Influence>
     <Bribe>15</Bribe>
     <Loyalty>6</Loyalty>
-    <PersonalTreasury>-1</PersonalTreasury>
-    <CounterBribe>-1</CounterBribe>
+    <PersonalTreasury>0</PersonalTreasury>
+    <CounterBribe>0</CounterBribe>
     <SenatorInFaction>False</SenatorInFaction>
     <EraEnd>False</EraEnd>
-    <ResultBaseNumber>19</ResultBaseNumber>
+    <ResultBaseNumber>17</ResultBaseNumber>
     <ResultDiceRoll>8</ResultDiceRoll>
   </Persuasion>
 </Content>

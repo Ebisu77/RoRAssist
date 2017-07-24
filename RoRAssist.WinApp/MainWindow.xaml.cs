@@ -1,6 +1,6 @@
 ﻿namespace RoRAssist.WinApp
 {
-	//TODO: general ideas:
+	//general ideas:
 	//- play with visibility of UI elemnts (e.g. bold fontweight, tooltips, better grids,
 	//  center everything on window size change, maybe grid spliter where it is logical)
 	//- do "graphic" of ui, eg.: lines or labels (styles)
@@ -21,10 +21,8 @@
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			//create first instance of main page
 			Pages.MainPage newMainPage = new Pages.MainPage();
-			this.MainFrame.Navigate(newMainPage);
+			MainFrame.Navigate(newMainPage);
 		}
 	}
 }
